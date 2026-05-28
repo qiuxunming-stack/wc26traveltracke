@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "wc26traveltracke",
+  "compatibility_date": "2026-05-28",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "shengqiu-web"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
