@@ -1,0 +1,3258 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Cup 2026 Travel Tracker — Team Fatigue &amp; Match Schedule</title>
+  <meta name="description" content="Track all 48 teams' travel distances, fatigue scores, match schedules, and explore 16 host cities and stadiums for the 2026 FIFA World Cup across USA, Mexico &amp; Canada." id="meta-description">
+  <meta name="keywords" content="World Cup 2026, travel tracker, fatigue index, match schedule, host cities, stadium guide, FIFA 2026, team journey, 世界杯2026, 旅行追踪" id="meta-keywords">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://worldcup26travel.com/" id="link-canonical">
+  <link rel="alternate" hreflang="en" href="https://worldcup26travel.com/?lang=en" id="hreflang-en">
+  <link rel="alternate" hreflang="zh" href="https://worldcup26travel.com/?lang=zh" id="hreflang-zh">
+  <link rel="alternate" hreflang="x-default" href="https://worldcup26travel.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="World Cup 2026 Travel Tracker — Team Fatigue &amp; Match Schedule" id="og-title">
+  <meta property="og:description" content="Track all 48 teams' travel distances, fatigue scores, match schedules, and explore 16 host cities and stadiums." id="og-description">
+  <meta property="og:url" content="https://worldcup26travel.com/" id="og-url">
+  <meta property="og:image" content="https://worldcup26travel.com/og-image.png" id="og-image">
+  <meta property="og:site_name" content="WC26 Travel Tracker">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="World Cup 2026 Travel Tracker — Team Fatigue &amp; Match Schedule" id="twitter-title">
+  <meta name="twitter:description" content="Track all 48 teams' travel distances, fatigue scores, match schedules, and explore 16 host cities and stadiums." id="twitter-description">
+  <meta name="twitter:image" content="https://worldcup26travel.com/og-image.png" id="twitter-image">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json" id="schema-jsonld">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "World Cup 2026 Travel Tracker",
+    "url": "https://worldcup26travel.com/",
+    "description": "Track all 48 teams' travel distances, fatigue scores, match schedules for the 2026 FIFA World Cup.",
+    "inLanguage": ["en", "zh"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://worldcup26travel.com/#teams?search={search_term}",
+      "query-input": "required name=search_term"
+    }
+  }
+  </script>
+
+  <!-- Fonts: Inter + Noto Sans SC (inline preload, font-display: swap) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237C3AED'/><text x='16' y='23' text-anchor='middle' font-size='20' fill='white'>⚽</text></svg>">
+
+  <style>
+/* ============================================================
+   CSS Custom Properties — Design Tokens
+   ============================================================ */
+:root {
+  /* Brand */
+  --color-brand:        #7C3AED;
+  --color-brand-light:  #A78BFA;
+  --color-brand-dark:   #5B21B6;
+  --color-brand-glow:   rgba(124,58,237,0.15);
+
+  /* Fatigue levels */
+  --fatigue-green:      #16A34A;
+  --fatigue-yellow:     #CA8A04;
+  --fatigue-orange:     #EA580C;
+  --fatigue-red:        #DC2626;
+
+  /* Neutrals — dark theme */
+  --color-bg:           #0F0F1A;
+  --color-bg-card:      #1A1A2E;
+  --color-bg-elevated:  #252540;
+  --color-bg-hover:     #2D2D4A;
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary:#94A3B8;
+  --color-text-muted:   #64748B;
+  --color-border:       #334155;
+  --color-border-subtle:#1E293B;
+
+  /* Typography */
+  --font-en:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-zh:  'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:'JetBrains Mono', 'SF Mono', monospace;
+
+  /* Font sizes */
+  --text-xs:    0.75rem;    /* 12px */
+  --text-sm:    0.8125rem;  /* 13px */
+  --text-base:  0.9375rem;  /* 15px */
+  --text-lg:    1.125rem;   /* 18px */
+  --text-xl:    1.375rem;   /* 22px */
+  --text-2xl:   1.75rem;    /* 28px */
+  --text-data:  2rem;       /* 32px */
+
+  /* Spacing (8px grid) */
+  --space-1:  0.25rem;  /* 4px */
+  --space-2:  0.5rem;   /* 8px */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.25rem;  /* 20px */
+  --space-6:  1.5rem;   /* 24px */
+  --space-8:  2rem;     /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+
+  /* Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+
+  /* Layout */
+  --content-max-width: 1280px;
+  --sidebar-width:      240px;
+  --header-height:      64px;
+  --footer-height:      48px;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-en);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Chinese text uses zh font */
+:lang(zh), [lang="zh"] {
+  font-family: var(--font-zh);
+}
+
+a {
+  color: var(--color-brand-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+a:hover { color: var(--color-brand); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+input, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+table { border-collapse: collapse; width: 100%; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+
+/* ============================================================
+   Layout — App Shell
+   ============================================================ */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--color-bg-card);
+  border-right: 1px solid var(--color-border-subtle);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6);
+  transition: transform var(--transition-normal);
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.sidebar__brand-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--color-brand);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.sidebar__brand-text {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.sidebar__brand-sub {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  flex: 1;
+}
+
+.sidebar__nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar__nav-item:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+
+.sidebar__nav-item--active {
+  background: var(--color-brand-glow);
+  color: var(--color-brand-light);
+  font-weight: 600;
+}
+
+.sidebar__nav-icon {
+  font-size: 1.15rem;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Bottom area */
+.sidebar__bottom {
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Language switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--color-border);
+}
+
+.lang-switcher:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text-primary);
+  border-color: var(--color-brand);
+}
+
+/* Main content area */
+.main-content {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top bar (mobile header) */
+.top-bar {
+  display: none;
+  height: var(--header-height);
+  padding: 0 var(--space-6);
+  background: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border-subtle);
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.top-bar__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  font-size: var(--text-base);
+}
+
+.hamburger-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.hamburger-btn:hover { background: var(--color-bg-hover); }
+
+/* Content area */
+.page-content {
+  flex: 1;
+  padding: var(--space-8) var(--space-10);
+  max-width: var(--content-max-width);
+  width: 100%;
+}
+
+/* Footer */
+.app-footer {
+  height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border-subtle);
+  padding: 0 var(--space-6);
+  margin-left: var(--sidebar-width);
+}
+
+.app-footer a { color: var(--color-text-muted); }
+.app-footer a:hover { color: var(--color-brand-light); }
+.app-footer__sep { color: var(--color-border); }
+
+/* ============================================================
+   Views — Show/Hide
+   ============================================================ */
+.view {
+  display: none;
+}
+
+.view--active {
+  display: block;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   Components
+   ============================================================ */
+
+/* Page header */
+.page-header {
+  margin-bottom: var(--space-8);
+}
+
+.page-header__title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.page-header__subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* Stats cards grid */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.stat-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.stat-card__label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.stat-card__value {
+  font-size: var(--text-data);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.stat-card__unit {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-weight: 400;
+}
+
+/* Section header */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.section-header__title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+.section-header__action {
+  font-size: var(--text-sm);
+  color: var(--color-brand-light);
+  cursor: pointer;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.section-header__action:hover { color: var(--color-brand); }
+
+/* Fatigue badge */
+.fatigue-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.fatigue-badge--green  { background: rgba(22,163,74,0.15); color: var(--fatigue-green); }
+.fatigue-badge--yellow { background: rgba(202,138,4,0.15); color: var(--fatigue-yellow); }
+.fatigue-badge--orange { background: rgba(234,88,12,0.15); color: var(--fatigue-orange); }
+.fatigue-badge--red    { background: rgba(220,38,38,0.15); color: var(--fatigue-red); }
+
+.fatigue-badge__score { font-variant-numeric: tabular-nums; }
+.fatigue-badge__label { font-weight: 500; opacity: 0.85; }
+
+/* Data table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table thead {
+  border-bottom: 2px solid var(--color-border);
+}
+
+.data-table th {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.data-table th:hover { color: var(--color-text-secondary); }
+
+.data-table th .sort-arrow {
+  margin-left: var(--space-1);
+  opacity: 0.4;
+}
+
+.data-table th .sort-arrow--active { opacity: 1; color: var(--color-brand-light); }
+
+.data-table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border-subtle);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.data-table tbody tr:hover {
+  background: var(--color-bg-hover);
+}
+
+.data-table tbody tr { transition: background var(--transition-fast); }
+
+/* Team cell with flag */
+.team-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.team-cell__flag { font-size: 1.1rem; flex-shrink: 0; }
+.team-cell__name { font-weight: 600; color: var(--color-text-primary); }
+
+/* Clickable row */
+.data-table tbody tr[data-href] { cursor: pointer; }
+
+/* Match detail accordion */
+.match-row--clickable { cursor: pointer; }
+.match-row--expanded { background: var(--color-bg-hover) !important; }
+
+.match-detail-row { display: none; }
+.match-detail-row--open { display: table-row; }
+
+.match-detail-panel {
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-bg-card);
+  border-bottom: 2px solid var(--color-brand);
+  animation: slideDown 0.25s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.match-detail-panel__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+.match-detail-panel__section { }
+.match-detail-panel__section-title {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-3);
+}
+
+.match-detail-panel__teams {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-5);
+  padding: var(--space-4);
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+.match-detail-panel__team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  min-width: 80px;
+}
+
+.match-detail-panel__team-flag { font-size: 2rem; line-height: 1; }
+.match-detail-panel__team-name { font-size: var(--text-base); font-weight: 700; color: var(--color-text-primary); text-align: center; }
+.match-detail-panel__team-group { font-size: var(--text-xs); color: var(--color-text-muted); }
+
+.match-detail-panel__vs {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--color-brand-light);
+}
+
+.match-detail-panel__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.match-detail-panel__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+}
+
+.match-detail-panel__meta-icon { font-size: 1rem; }
+.match-detail-panel__meta-label { color: var(--color-text-muted); }
+.match-detail-panel__meta-value { font-weight: 600; color: var(--color-text-primary); }
+
+.match-detail-panel__nav {
+  display: flex;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.match-detail-panel__nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-brand);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  text-decoration: none;
+}
+
+.match-detail-panel__nav-btn:hover { background: var(--color-brand-dark); }
+.match-detail-panel__nav-btn--venue { background: var(--color-bg-elevated); color: var(--color-text-primary); border: 1px solid var(--color-border); }
+.match-detail-panel__nav-btn--venue:hover { background: var(--color-bg-hover); }
+
+.match-table-hint {
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  padding: var(--space-3);
+}
+
+@media (max-width: 768px) {
+  .match-detail-panel__cols { grid-template-columns: 1fr; }
+  .match-detail-panel__teams { flex-direction: column; gap: var(--space-3); }
+  .match-detail-panel__vs { margin: var(--space-1) 0; }
+  .match-detail-panel__meta { flex-direction: column; }
+  .match-detail-panel__nav { flex-direction: column; }
+}
+
+/* Card (generic) */
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card:hover {
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+/* Match card */
+.match-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.match-card__time {
+  text-align: center;
+  min-width: 80px;
+}
+
+.match-card__date {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.match-card__kickoff {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1;
+}
+
+.match-card__teams {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.match-card__team {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  font-size: var(--text-base);
+}
+
+.match-card__team--home { text-align: right; }
+.match-card__team--away { text-align: left; }
+
+.match-card__score {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  min-width: 60px;
+  text-align: center;
+}
+.match-card__score--upcoming {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.match-card__venue {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.match-card__meta {
+  text-align: right;
+  min-width: 90px;
+}
+
+.match-card__status {
+  display: inline-flex;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+
+.match-card__status--live {
+  background: rgba(220,38,38,0.15);
+  color: var(--fatigue-red);
+  animation: pulse 2s infinite;
+}
+
+.match-card__status--finished {
+  background: rgba(100,116,139,0.15);
+  color: var(--color-text-muted);
+}
+
+.match-card__status--upcoming {
+  background: rgba(124,58,237,0.15);
+  color: var(--color-brand-light);
+}
+
+.match-card__stage {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Climate widget */
+.climate-widget {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.climate-widget__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+}
+
+.climate-widget__icon { font-size: 1.25rem; margin-bottom: var(--space-1); }
+.climate-widget__value { font-size: var(--text-base); font-weight: 600; color: var(--color-text-primary); }
+.climate-widget__label { font-size: var(--text-xs); color: var(--color-text-muted); }
+
+/* Journey timeline */
+.journey-timeline {
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+.journey-timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.journey-timeline__node {
+  position: relative;
+  padding-bottom: var(--space-6);
+}
+
+.journey-timeline__node:last-child { padding-bottom: 0; }
+
+.journey-timeline__dot {
+  position: absolute;
+  left: -29px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-brand);
+  border: 2px solid var(--color-bg-card);
+  z-index: 1;
+}
+
+.journey-timeline__date {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.journey-timeline__city {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.journey-timeline__meta {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-1);
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-bar__search {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  max-width: 360px;
+}
+
+.filter-bar__search-icon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.filter-bar__input {
+  width: 100%;
+  padding: var(--space-2) var(--space-4) var(--space-2) var(--space-8);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-size: var(--text-sm);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.filter-bar__input:focus { border-color: var(--color-brand); }
+.filter-bar__input::placeholder { color: var(--color-text-muted); }
+
+.filter-bar__select {
+  padding: var(--space-2) var(--space-6) var(--space-2) var(--space-3);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  font-size: var(--text-sm);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' stroke='%2364748B' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+
+.filter-bar__select:focus { border-color: var(--color-brand); }
+
+/* Country tabs */
+.country-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.country-tab {
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.country-tab:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+
+.country-tab--active {
+  background: var(--color-brand-glow);
+  color: var(--color-brand-light);
+  border-color: var(--color-brand);
+}
+
+/* Venue card */
+.venue-card {
+  cursor: pointer;
+}
+
+.venue-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.venue-card__name {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.venue-card__city {
+  font-size: var(--text-sm);
+  color: var(--color-brand-light);
+}
+
+.venue-card__stats {
+  display: flex;
+  gap: var(--space-6);
+  font-size: var(--text-sm);
+}
+
+.venue-card__stat-label { color: var(--color-text-muted); }
+.venue-card__stat-value { font-weight: 600; color: var(--color-text-primary); }
+
+/* City grid */
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+/* Fatigue breakdown */
+.fatigue-breakdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.fatigue-breakdown__item {
+  background: var(--color-bg-elevated);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.fatigue-breakdown__label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fatigue-breakdown__value {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.fatigue-breakdown__weight {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+/* Route thumbnail (mini map concept) */
+.route-thumbnail {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  max-width: 180px;
+  overflow: hidden;
+}
+
+.route-thumbnail__city {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.route-thumbnail__arrow { flex-shrink: 0; color: var(--color-text-muted); }
+
+/* Loading / Empty / Error states */
+.state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+  gap: var(--space-4);
+}
+
+.state-container__icon { font-size: 2.5rem; margin-bottom: var(--space-2); }
+.state-container__title { font-size: var(--text-lg); font-weight: 600; }
+.state-container__desc { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 400px; }
+.state-container__action {
+  padding: var(--space-2) var(--space-6);
+  background: var(--color-brand);
+  color: white;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  margin-top: var(--space-2);
+  transition: background var(--transition-fast);
+}
+.state-container__action:hover { background: var(--color-brand-dark); }
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, var(--color-bg-elevated) 25%, var(--color-bg-hover) 50%, var(--color-bg-elevated) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton--row { height: 40px; margin-bottom: var(--space-2); }
+.skeleton--header { height: 24px; width: 60%; margin-bottom: var(--space-4); }
+.skeleton--card { height: 120px; margin-bottom: var(--space-4); }
+
+/* Utility classes */
+.u-hidden { display: none !important; }
+.u-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+.u-text-center { text-align: center; }
+.u-text-right { text-align: right; }
+.u-mb-4 { margin-bottom: var(--space-4); }
+.u-mb-6 { margin-bottom: var(--space-6); }
+.u-flex { display: flex; }
+.u-gap-4 { gap: var(--space-4); }
+.u-muted { color: var(--color-text-muted); }
+
+/* Tooltip */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+  font-size: var(--text-xs);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  z-index: 200;
+  pointer-events: none;
+  border: 1px solid var(--color-border);
+}
+
+/* Card variants */
+.card--clickable {
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.card--clickable:hover {
+  border-color: var(--color-brand);
+  background: var(--color-bg-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Table row clickable */
+.data-table__row--clickable {
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.data-table__row--clickable:hover {
+  background: var(--color-bg-hover);
+}
+
+/* Match status badges */
+.match-status--live {
+  background: var(--fatigue-red) !important;
+  color: white !important;
+  animation: pulse 2s infinite;
+}
+.match-status--finished {
+  background: var(--color-bg-elevated) !important;
+  color: var(--color-text-muted) !important;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* ============================================================
+   Responsive — Tablet (768–1199px)
+   ============================================================ */
+@media (max-width: 1199px) {
+  :root {
+    --sidebar-width: 200px;
+    --text-2xl: 1.5rem;
+    --text-data: 1.75rem;
+  }
+
+  .stats-cards { grid-template-columns: repeat(2, 1fr); }
+  .city-grid { grid-template-columns: repeat(2, 1fr); }
+  .fatigue-breakdown { grid-template-columns: repeat(2, 1fr); }
+  .page-content { padding: var(--space-6); }
+}
+
+/* ============================================================
+   Responsive — Mobile (<768px)
+   ============================================================ */
+@media (max-width: 767px) {
+  :root {
+    --sidebar-width: 0;
+    --header-height: 56px;
+    --text-2xl: 1.375rem;
+    --text-xl: 1.125rem;
+    --text-data: 1.5rem;
+  }
+
+  .app-shell { flex-direction: column; }
+
+  /* Sidebar becomes off-screen drawer */
+  .sidebar {
+    transform: translateX(-100%);
+    width: 260px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .sidebar--open { transform: translateX(0); }
+
+  .main-content { margin-left: 0; }
+
+  .top-bar { display: flex; }
+  .hamburger-btn { display: flex; }
+
+  /* Overlay */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 99;
+  }
+
+  .sidebar-overlay--visible { display: block; }
+
+  .stats-cards { grid-template-columns: 1fr; }
+  .city-grid { grid-template-columns: 1fr; }
+  .fatigue-breakdown { grid-template-columns: 1fr; }
+  .page-content { padding: var(--space-4); }
+
+  /* Table → card list */
+  .data-table { display: none; }
+  .data-table--mobile-cards { display: block; }
+
+  .app-footer { margin-left: 0; flex-wrap: wrap; gap: var(--space-3); text-align: center; }
+
+  .match-card { flex-wrap: wrap; gap: var(--space-3); }
+  .match-card__time { min-width: auto; flex-basis: 100%; display: flex; gap: var(--space-3); align-items: baseline; justify-content: center; }
+  .match-card__teams { flex-basis: 100%; }
+  .match-card__meta { flex-basis: 100%; text-align: center; }
+
+  .filter-bar { flex-direction: column; }
+  .filter-bar__search { max-width: none; }
+}
+  </style>
+</head>
+<body>
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-icon">⚽</div>
+      <div>
+        <div class="sidebar__brand-text" id="brand-text" data-i18n="siteTitle">Travel Tracker</div>
+        <div class="sidebar__brand-sub" id="brand-sub" data-i18n="siteSubtitle">WC 2026</div>
+      </div>
+    </div>
+
+    <nav class="sidebar__nav" id="sidebar-nav">
+      <button class="sidebar__nav-item sidebar__nav-item--active" data-nav="dashboard">
+        <span class="sidebar__nav-icon">📊</span>
+        <span class="sidebar__nav-label" data-i18n="navDashboard">Dashboard</span>
+      </button>
+      <button class="sidebar__nav-item" data-nav="teams">
+        <span class="sidebar__nav-icon">✈️</span>
+        <span class="sidebar__nav-label" data-i18n="navTeams">Team Travel</span>
+      </button>
+      <button class="sidebar__nav-item" data-nav="matches">
+        <span class="sidebar__nav-icon">📅</span>
+        <span class="sidebar__nav-label" data-i18n="navMatches">Match Schedule</span>
+      </button>
+      <button class="sidebar__nav-item" data-nav="venues">
+        <span class="sidebar__nav-icon">🏟️</span>
+        <span class="sidebar__nav-label" data-i18n="navVenues">Cities &amp; Stadiums</span>
+      </button>
+    </nav>
+
+    <div class="sidebar__bottom">
+      <button class="lang-switcher" id="lang-switch-btn" aria-label="Switch language">
+        <span>🌐</span>
+        <span data-i18n="langSwitch">中文</span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="main-content" id="main-content">
+    <!-- Top bar (mobile) -->
+    <header class="top-bar">
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu">☰</button>
+      <div class="top-bar__brand">
+        <span>⚽</span><span data-i18n="siteTitle">World Cup 2026 Travel Tracker</span>
+      </div>
+      <button class="lang-switcher" id="lang-switch-btn-mobile" aria-label="Switch language">
+        <span>🌐</span>
+        <span data-i18n="langSwitch">中文</span>
+      </button>
+    </header>
+
+    <!-- Page content -->
+    <main class="page-content" id="page-content">
+
+      <!-- ===== View: Dashboard ===== -->
+      <section class="view view--active" id="view-dashboard" data-view="dashboard">
+        <div class="page-header">
+          <h1 class="page-header__title" data-i18n="dashFatigueRank">Fatigue Ranking</h1>
+          <p class="page-header__subtitle" data-i18n="dashFatigueRankDesc">Which teams have the hardest travel schedule? Based on distance, elevation, timezone changes, and rest intervals — purely estimated from group stage match data.</p>
+        </div>
+
+        <!-- Stats cards -->
+        <div class="stats-cards" id="dash-stats">
+          <div class="stat-card">
+            <div class="stat-card__label" data-i18n="dashTotalDistance">Total Distance</div>
+            <div class="stat-card__value" id="stat-total-distance">--</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__label" data-i18n="dashAvgFatigue">Avg Fatigue</div>
+            <div class="stat-card__value" id="stat-avg-fatigue">--</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__label" data-i18n="dashTeamsTracked">Teams Tracked</div>
+            <div class="stat-card__value" id="stat-teams-tracked">48</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__label" data-i18n="dashHostCities">Host Cities</div>
+            <div class="stat-card__value" id="stat-host-cities">16</div>
+          </div>
+        </div>
+
+        <!-- Top fatigue teams -->
+        <div class="section-header">
+          <h2 class="section-header__title" data-i18n="dashTopFatigue">Most Fatigued Teams</h2>
+          <span class="section-header__action" onclick="navigateTo('teams')" data-i18n="viewAll">View All →</span>
+        </div>
+        <div id="dash-top-fatigue" class="u-mb-6">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Comfortable teams -->
+        <div class="section-header">
+          <h2 class="section-header__title" data-i18n="dashComfortable">Most Comfortable Teams</h2>
+        </div>
+        <div id="dash-comfortable" class="u-mb-6">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Upcoming -->
+        <div class="section-header">
+          <h2 class="section-header__title" data-i18n="dashUpcoming">Upcoming</h2>
+        </div>
+        <div id="dash-upcoming">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- ===== View: Teams ===== -->
+      <section class="view" id="view-teams" data-view="teams">
+        <div class="page-header">
+          <h1 class="page-header__title" data-i18n="teamTableHeader">Team Travel Overview</h1>
+          <p class="page-header__subtitle" data-i18n="teamTableHeaderDesc">All 48 teams sorted by estimated travel fatigue. Click any row for detailed breakdown.</p>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-bar__search">
+            <span class="filter-bar__search-icon">🔍</span>
+            <input type="text" class="filter-bar__input" id="teams-search" data-i18n-attr="placeholder" data-i18n="teamSearchPlaceholder" placeholder="Search teams..." oninput="renderTeamsView()">
+          </div>
+          <select class="filter-bar__select" id="teams-sort" onchange="renderTeamsView()">
+            <option value="fatigue-desc" data-i18n="teamSortFatigue">Highest Fatigue</option>
+            <option value="fatigue-asc" data-i18n="teamSortFatigueAsc">Lowest Fatigue</option>
+            <option value="distance-desc" data-i18n="teamSortDistance">Most Distance</option>
+            <option value="group-asc" data-i18n="teamSortGroup">By Group</option>
+          </select>
+          <select class="filter-bar__select" id="teams-group-filter" onchange="renderTeamsView()">
+            <option value="all" data-i18n="teamFilterAll">All Groups</option>
+          </select>
+        </div>
+
+        <table class="data-table" id="teams-table">
+          <thead>
+            <tr>
+              <th><span data-i18n="teamColTeam">Team</span></th>
+              <th><span data-i18n="teamColGroup">Group</span></th>
+              <th><span data-i18n="teamColFatigue">Fatigue</span></th>
+              <th><span data-i18n="teamColDistance">Distance</span></th>
+              <th class="col-route"><span data-i18n="teamColRoute">Route</span></th>
+              <th class="col-tz"><span data-i18n="teamColElevation">Max Elevation</span></th>
+              <th><span data-i18n="teamColRest">Avg Rest</span></th>
+            </tr>
+          </thead>
+          <tbody id="teams-tbody">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+
+        <div class="data-table--mobile-cards u-hidden" id="teams-cards">
+          <!-- Rendered by JS (mobile) -->
+        </div>
+      </section>
+
+      <!-- ===== View: Team Detail ===== -->
+      <section class="view" id="view-team-detail" data-view="team-detail">
+        <div class="page-header">
+          <button class="section-header__action" onclick="navigateTo('teams')" style="margin-bottom:var(--space-2)">← <span data-i18n="backToTeams">Back to Teams</span></button>
+          <h1 class="page-header__title" id="team-detail-title">--</h1>
+        </div>
+
+        <!-- Team hero stats -->
+        <div class="stats-cards" id="team-detail-stats">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Fatigue breakdown -->
+        <div class="section-header">
+          <h2 class="section-header__title" data-i18n="teamFatigueBreakdown">Fatigue Breakdown</h2>
+        </div>
+        <div class="fatigue-breakdown" id="team-fatigue-breakdown">
+          <!-- Rendered by JS -->
+        </div>
+
+        <!-- Journey timeline -->
+        <div class="section-header">
+          <h2 class="section-header__title" data-i18n="teamRouteTitle">Match Route</h2>
+        </div>
+        <div class="journey-timeline" id="team-journey">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- ===== View: Matches ===== -->
+      <section class="view" id="view-matches" data-view="matches">
+        <div class="page-header">
+          <h1 class="page-header__title" data-i18n="matchScheduleTitle">Match Schedule</h1>
+          <p class="page-header__subtitle" data-i18n="matchScheduleDesc">Official FIFA World Cup 2026 match schedule. Data sourced from worldcup26.ir open API.</p>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-bar__search">
+            <span class="filter-bar__search-icon">🔍</span>
+            <input type="text" class="filter-bar__input" id="matches-search" data-i18n-attr="placeholder" data-i18n="matchSearchPlaceholder" placeholder="Search by team or city..." oninput="debouncedRenderMatches()">
+          </div>
+          <select class="filter-bar__select" id="matches-stage" onchange="renderMatchesView()">
+            <option value="all" data-i18n="matchFilterAll">All Matches</option>
+            <option value="group" data-i18n="matchFilterGroup">Group Stage</option>
+            <option value="ko" data-i18n="matchFilterKo">Knockout</option>
+          </select>
+          <select class="filter-bar__select" id="matches-group" onchange="renderMatchesView()">
+            <option value="all" data-i18n="teamFilterAll">All Groups</option>
+          </select>
+        </div>
+
+        <div id="matches-content">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- ===== View: Venues ===== -->
+      <section class="view" id="view-venues" data-view="venues">
+        <div class="page-header">
+          <h1 class="page-header__title" data-i18n="venueCityTitle">Host Cities</h1>
+          <p class="page-header__subtitle" data-i18n="venueCityDesc">16 host cities across 3 countries — USA, Mexico, and Canada.</p>
+        </div>
+
+        <div class="country-tabs" id="country-tabs">
+          <button class="country-tab country-tab--active" data-country="all" onclick="filterVenues('all')" data-i18n="venueCountryAll">All Countries</button>
+          <button class="country-tab" data-country="US" onclick="filterVenues('US')">🇺🇸 USA</button>
+          <button class="country-tab" data-country="MX" onclick="filterVenues('MX')">🇲🇽 Mexico</button>
+          <button class="country-tab" data-country="CA" onclick="filterVenues('CA')">🇨🇦 Canada</button>
+        </div>
+
+        <div class="section-header">
+          <h2 class="section-header__title" data-i18n="venueStadiumTitle">Stadiums</h2>
+        </div>
+        <div class="city-grid" id="venues-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+      <!-- ===== View: Venue Detail ===== -->
+      <section class="view" id="view-venue-detail" data-view="venue-detail">
+        <div class="page-header">
+          <button class="section-header__action" onclick="navigateTo('venues')" style="margin-bottom:var(--space-2)">← <span data-i18n="backToVenues">Back to Venues</span></button>
+          <h1 class="page-header__title" id="venue-detail-title">--</h1>
+        </div>
+
+        <div class="stats-cards" id="venue-detail-stats">
+          <!-- Rendered by JS -->
+        </div>
+
+        <div class="section-header">
+          <h2 class="section-header__title" data-i18n="venueClimate">June-July Climate</h2>
+        </div>
+        <div class="card" id="venue-climate">
+          <!-- Rendered by JS -->
+        </div>
+
+        <div class="section-header u-mb-4" style="margin-top:var(--space-6)">
+          <h2 class="section-header__title" data-i18n="venueMatchesHosted">Matches Hosted</h2>
+        </div>
+        <div id="venue-matches">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+      <span data-i18n="footerCredit">Data from World Cup 2026 open API</span>
+      <span class="app-footer__sep">|</span>
+      <a href="https://worldcup26.ir" target="_blank" rel="noopener noreferrer">worldcup26.ir</a>
+      <span class="app-footer__sep">|</span>
+      <span data-i18n="footerDisclaimer">For informational purposes only. Not affiliated with FIFA.</span>
+    </footer>
+  </div>
+
+  <script>
+/* STATIC DATA from worldcup26.ir (snapshot: 2026-05-28) */
+window.__STATIC_GAMES__ = {"games":[{"_id":"679c9c8a5749c4077500e014","id":"14","home_team_id":"29","away_team_id":"30","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"H","matchday":"1","local_date":"06/15/2026 12:00","persian_date":"1405-03-25 12:00","stadium_id":"14","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Spain","home_team_name_fa":"اسپانیا","away_team_name_en":"Cape Verde","away_team_name_fa":"کیپ ورد"},{"_id":"679c9c8a5749c4077500e016","id":"16","home_team_id":"31","away_team_id":"32","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"H","matchday":"1","local_date":"06/15/2026 21:00","persian_date":"1405-03-25 21:00","stadium_id":"16","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Saudi Arabia","home_team_name_fa":"عربستان","away_team_name_en":"Uruguay","away_team_name_fa":"اروگوئه"},{"_id":"679c9c8a5749c4077500e020","id":"20","home_team_id":"39","away_team_id":"40","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"J","matchday":"1","local_date":"06/16/2026 12:00","persian_date":"1405-03-26 12:00","stadium_id":"4","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Austria","home_team_name_fa":"اتریش","away_team_name_en":"Jordan","away_team_name_fa":"اردن"},{"_id":"679c9c8a5749c4077500e023","id":"23","home_team_id":"43","away_team_id":"44","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"K","matchday":"1","local_date":"06/17/2026 18:00","persian_date":"1405-03-27 18:00","stadium_id":"7","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Uzbekistan","home_team_name_fa":"ازبکستان","away_team_name_en":"Colombia","away_team_name_fa":"کلمبیا"},{"_id":"679c9c8a5749c4077500e040","id":"40","home_team_id":"32","away_team_id":"30","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"H","matchday":"2","local_date":"06/21/2026 21:00","persian_date":"1405-03-31 21:00","stadium_id":"8","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Uruguay","home_team_name_fa":"اروگوئه","away_team_name_en":"Cape Verde","away_team_name_fa":"کیپ ورد"},{"_id":"679c9c8a5749c4077500e047","id":"47","home_team_id":"44","away_team_id":"42","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"K","matchday":"2","local_date":"06/23/2026 12:00","persian_date":"1405-04-02 12:00","stadium_id":"15","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Colombia","home_team_name_fa":"کلمبیا","away_team_name_en":"Democratic Republic of the Congo","away_team_name_fa":"جمهوری دموکراتیک کنگو"},{"_id":"679c9c8a5749c4077500e008","id":"8","home_team_id":"7","away_team_id":"8","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"B","matchday":"1","local_date":"06/13/2026 12:00","persian_date":"1405-03-23 12:00","stadium_id":"8","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Qatar","home_team_name_fa":"قطر","away_team_name_en":"Switzerland","away_team_name_fa":"سوئیس"},{"_id":"679c9c8a5749c4077500e015","id":"15","home_team_id":"25","away_team_id":"26","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"G","matchday":"1","local_date":"06/15/2026 15:00","persian_date":"1405-03-25 15:00","stadium_id":"15","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Belgium","home_team_name_fa":"بلژیک","away_team_name_en":"Egypt","away_team_name_fa":"مصر"},{"_id":"679c9c8a5749c4077500e025","id":"25","home_team_id":"1","away_team_id":"3","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"A","matchday":"2","local_date":"06/18/2026 13:00","persian_date":"1405-03-28 13:00","stadium_id":"9","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Mexico","home_team_name_fa":"مکزیک","away_team_name_en":"South Korea","away_team_name_fa":"کره جنوبی"},{"_id":"679c9c8a5749c4077500e033","id":"33","home_team_id":"17","away_team_id":"19","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"E","matchday":"2","local_date":"06/20/2026 19:00","persian_date":"1405-03-30 19:00","stadium_id":"1","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Germany","home_team_name_fa":"آلمان","away_team_name_en":"Ivory Coast","away_team_name_fa":"ساحل عاج"},{"_id":"679c9c8a5749c4077500e035","id":"35","home_team_id":"21","away_team_id":"23","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"F","matchday":"2","local_date":"06/20/2026 12:00","persian_date":"1405-03-30 12:00","stadium_id":"3","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Netherlands","home_team_name_fa":"هلند","away_team_name_en":"Sweden","away_team_name_fa":"سوئد"},{"_id":"679c9c8a5749c4077500e041","id":"41","home_team_id":"33","away_team_id":"35","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"I","matchday":"2","local_date":"06/22/2026 17:00","persian_date":"1405-04-01 17:00","stadium_id":"9","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"France","home_team_name_fa":"فرانسه","away_team_name_en":"Iraq","away_team_name_fa":"عراق"},{"_id":"679c9c8a5749c4077500e044","id":"44","home_team_id":"40","away_team_id":"38","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"J","matchday":"2","local_date":"06/22/2026 11:00","persian_date":"1405-04-01 11:00","stadium_id":"12","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Jordan","home_team_name_fa":"اردن","away_team_name_en":"Algeria","away_team_name_fa":"الجزایر"},{"_id":"679c9c8a5749c4077500e045","id":"45","home_team_id":"41","away_team_id":"43","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"K","matchday":"2","local_date":"06/23/2026 15:00","persian_date":"1405-04-02 15:00","stadium_id":"13","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Portugal","home_team_name_fa":"پرتغال","away_team_name_en":"Uzbekistan","away_team_name_fa":"ازبکستان"},{"_id":"679c9c8a5749c4077500e059","id":"59","home_team_id":"22","away_team_id":"23","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"F","matchday":"3","local_date":"06/26/2026 18:00","persian_date":"1405-04-05 18:00","stadium_id":"11","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Japan","home_team_name_fa":"ژاپن","away_team_name_en":"Sweden","away_team_name_fa":"سوئد"},{"_id":"679c9c8a5749c4077500e001","id":"1","home_team_id":"1","away_team_id":"2","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"A","matchday":"1","local_date":"06/11/2026 13:00","persian_date":"1405-03-21 13:00","stadium_id":"1","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Mexico","home_team_name_fa":"مکزیک","away_team_name_en":"South Africa","away_team_name_fa":"آفریقای جنوبی"},{"_id":"679c9c8a5749c4077500e007","id":"7","home_team_id":"9","away_team_id":"10","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"C","matchday":"1","local_date":"06/13/2026 18:00","persian_date":"1405-03-23 18:00","stadium_id":"7","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Brazil","home_team_name_fa":"برزیل","away_team_name_en":"Morocco","away_team_name_fa":"مراکش"},{"_id":"679c9c8a5749c4077500e009","id":"9","home_team_id":"19","away_team_id":"20","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"E","matchday":"1","local_date":"06/14/2026 18:00","persian_date":"1405-03-24 18:00","stadium_id":"9","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Ivory Coast","home_team_name_fa":"ساحل عاج","away_team_name_en":"Ecuador","away_team_name_fa":"اکوادور"},{"_id":"679c9c8a5749c4077500e011","id":"11","home_team_id":"21","away_team_id":"22","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"F","matchday":"1","local_date":"06/14/2026 15:00","persian_date":"1405-03-24 15:00","stadium_id":"11","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Netherlands","home_team_name_fa":"هلند","away_team_name_en":"Japan","away_team_name_fa":"ژاپن"},{"_id":"679c9c8a5749c4077500e026","id":"26","home_team_id":"8","away_team_id":"6","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"B","matchday":"2","local_date":"06/18/2026 12:00","persian_date":"1405-03-28 12:00","stadium_id":"10","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Switzerland","home_team_name_fa":"سوئیس","away_team_name_en":"Bosnia and Herzegovina","away_team_name_fa":"بوسنی و هرزگوین"},{"_id":"679c9c8a5749c4077500e036","id":"36","home_team_id":"24","away_team_id":"22","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"F","matchday":"2","local_date":"06/20/2026 15:00","persian_date":"1405-03-30 15:00","stadium_id":"4","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Tunisia","home_team_name_fa":"تونس","away_team_name_en":"Japan","away_team_name_fa":"ژاپن"},{"_id":"679c9c8a5749c4077500e038","id":"38","home_team_id":"28","away_team_id":"26","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"G","matchday":"2","local_date":"06/21/2026 12:00","persian_date":"1405-03-31 12:00","stadium_id":"6","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"New Zealand","home_team_name_fa":"نیوزیلند","away_team_name_en":"Egypt","away_team_name_fa":"مصر"},{"_id":"679c9c8a5749c4077500e062","id":"62","home_team_id":"36","away_team_id":"33","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"I","matchday":"3","local_date":"06/26/2026 15:00","persian_date":"1405-04-05 15:00","stadium_id":"14","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Norway","home_team_name_fa":"نروژ","away_team_name_en":"France","away_team_name_fa":"فرانسه"},{"_id":"679c9c8a5749c4077500e071","id":"71","home_team_id":"44","away_team_id":"41","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"K","matchday":"3","local_date":"06/27/2026 19:30","persian_date":"1405-04-06 19:30","stadium_id":"7","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Colombia","home_team_name_fa":"کلمبیا","away_team_name_en":"Portugal","away_team_name_fa":"پرتغال"},{"_id":"679c9c8a5749c4077500e005","id":"5","home_team_id":"11","away_team_id":"12","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"C","matchday":"1","local_date":"06/13/2026 21:00","persian_date":"1405-03-23 21:00","stadium_id":"5","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Haiti","home_team_name_fa":"هائیتی","away_team_name_en":"Scotland","away_team_name_fa":"اسکاتلند"},{"_id":"679c9c8a5749c4077500e018","id":"18","home_team_id":"35","away_team_id":"36","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"I","matchday":"1","local_date":"06/16/2026 18:00","persian_date":"1405-03-26 18:00","stadium_id":"2","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Iraq","home_team_name_fa":"عراق","away_team_name_en":"Norway","away_team_name_fa":"نروژ"},{"_id":"679c9c8a5749c4077500e021","id":"21","home_team_id":"41","away_team_id":"42","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"K","matchday":"1","local_date":"06/17/2026 12:00","persian_date":"1405-03-27 12:00","stadium_id":"5","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Portugal","home_team_name_fa":"پرتغال","away_team_name_en":"Democratic Republic of the Congo","away_team_name_fa":"جمهوری دموکراتیک کنگو"},{"_id":"679c9c8a5749c4077500e022","id":"22","home_team_id":"45","away_team_id":"46","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"L","matchday":"1","local_date":"06/17/2026 15:00","persian_date":"1405-03-27 15:00","stadium_id":"6","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"England","home_team_name_fa":"انگلستان","away_team_name_en":"Croatia","away_team_name_fa":"کرواسی"},{"_id":"679c9c8a5749c4077500e031","id":"31","home_team_id":"13","away_team_id":"15","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"D","matchday":"2","local_date":"06/19/2026 12:00","persian_date":"1405-03-29 12:00","stadium_id":"15","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"United States","home_team_name_fa":"آمریکا","away_team_name_en":"Australia","away_team_name_fa":"استرالیا"},{"_id":"679c9c8a5749c4077500e039","id":"39","home_team_id":"29","away_team_id":"31","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"H","matchday":"2","local_date":"06/21/2026 18:00","persian_date":"1405-03-31 18:00","stadium_id":"7","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Spain","home_team_name_fa":"اسپانیا","away_team_name_en":"Saudi Arabia","away_team_name_fa":"عربستان"},{"_id":"679c9c8a5749c4077500e042","id":"42","home_team_id":"36","away_team_id":"34","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"I","matchday":"2","local_date":"06/22/2026 14:00","persian_date":"1405-04-01 14:00","stadium_id":"10","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Norway","home_team_name_fa":"نروژ","away_team_name_en":"Senegal","away_team_name_fa":"سنگال"},{"_id":"679c9c8a5749c4077500e046","id":"46","home_team_id":"48","away_team_id":"46","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"L","matchday":"2","local_date":"06/23/2026 19:00","persian_date":"1405-04-02 19:00","stadium_id":"14","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Panama","home_team_name_fa":"پاناما","away_team_name_en":"Croatia","away_team_name_fa":"کرواسی"},{"_id":"679c9c8a5749c4077500e050","id":"50","home_team_id":"10","away_team_id":"11","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"C","matchday":"3","local_date":"06/24/2026 18:00","persian_date":"1405-04-03 18:00","stadium_id":"2","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Morocco","home_team_name_fa":"مراکش","away_team_name_en":"Haiti","away_team_name_fa":"هائیتی"},{"_id":"679c9c8a5749c4077500e060","id":"60","home_team_id":"24","away_team_id":"21","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"F","matchday":"3","local_date":"06/26/2026 18:00","persian_date":"1405-04-05 18:00","stadium_id":"12","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Tunisia","home_team_name_fa":"تونس","away_team_name_en":"Netherlands","away_team_name_fa":"هلند"},{"_id":"679c9c8a5749c4077500e061","id":"61","home_team_id":"34","away_team_id":"35","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"I","matchday":"3","local_date":"06/26/2026 15:00","persian_date":"1405-04-05 15:00","stadium_id":"13","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Senegal","home_team_name_fa":"سنگال","away_team_name_en":"Iraq","away_team_name_fa":"عراق"},{"_id":"679c9c8a5749c4077500e072","id":"72","home_team_id":"42","away_team_id":"43","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"K","matchday":"3","local_date":"06/27/2026 19:30","persian_date":"1405-04-06 19:30","stadium_id":"8","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Democratic Republic of the Congo","home_team_name_fa":"جمهوری دموکراتیک کنگو","away_team_name_en":"Uzbekistan","away_team_name_fa":"ازبکستان"},{"_id":"679c9c8a5749c4077500e013","id":"13","home_team_id":"27","away_team_id":"28","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"G","matchday":"1","local_date":"06/15/2026 18:00","persian_date":"1405-03-25 18:00","stadium_id":"13","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Iran","home_team_name_fa":"ایران","away_team_name_en":"New Zealand","away_team_name_fa":"نیوزیلند"},{"_id":"679c9c8a5749c4077500e019","id":"19","home_team_id":"37","away_team_id":"38","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"J","matchday":"1","local_date":"06/16/2026 20:00","persian_date":"1405-03-26 20:00","stadium_id":"3","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Argentina","home_team_name_fa":"آرژانتین","away_team_name_en":"Algeria","away_team_name_fa":"الجزایر"},{"_id":"679c9c8a5749c4077500e028","id":"28","home_team_id":"4","away_team_id":"2","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"A","matchday":"2","local_date":"06/18/2026 18:00","persian_date":"1405-03-28 18:00","stadium_id":"12","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Czech Republic","home_team_name_fa":"جمهوری چک","away_team_name_en":"South Africa","away_team_name_fa":"آفریقای جنوبی"},{"_id":"679c9c8a5749c4077500e048","id":"48","home_team_id":"45","away_team_id":"47","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"L","matchday":"2","local_date":"06/23/2026 21:00","persian_date":"1405-04-02 21:00","stadium_id":"16","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"England","home_team_name_fa":"انگلستان","away_team_name_en":"Ghana","away_team_name_fa":"غنا"},{"_id":"679c9c8a5749c4077500e052","id":"52","home_team_id":"4","away_team_id":"1","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"A","matchday":"3","local_date":"06/24/2026 19:00","persian_date":"1405-04-03 19:00","stadium_id":"4","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Czech Republic","home_team_name_fa":"جمهوری چک","away_team_name_en":"Mexico","away_team_name_fa":"مکزیک"},{"_id":"679c9c8a5749c4077500e055","id":"55","home_team_id":"18","away_team_id":"19","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"E","matchday":"3","local_date":"06/25/2026 16:00","persian_date":"1405-04-04 16:00","stadium_id":"7","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Curaçao","home_team_name_fa":"کوراسائو","away_team_name_en":"Ivory Coast","away_team_name_fa":"ساحل عاج"},{"_id":"679c9c8a5749c4077500e003","id":"3","home_team_id":"5","away_team_id":"6","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"B","matchday":"1","local_date":"06/12/2026 15:00","persian_date":"1405-03-22 15:00","stadium_id":"3","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Canada","home_team_name_fa":"کانادا","away_team_name_en":"Bosnia and Herzegovina","away_team_name_fa":"بوسنی و هرزگوین"},{"_id":"679c9c8a5749c4077500e024","id":"24","home_team_id":"47","away_team_id":"48","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"L","matchday":"1","local_date":"06/17/2026 21:00","persian_date":"1405-03-27 21:00","stadium_id":"8","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Ghana","home_team_name_fa":"غنا","away_team_name_en":"Panama","away_team_name_fa":"پاناما"},{"_id":"679c9c8a5749c4077500e029","id":"29","home_team_id":"9","away_team_id":"11","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"C","matchday":"2","local_date":"06/19/2026 21:00","persian_date":"1405-03-29 21:00","stadium_id":"13","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Brazil","home_team_name_fa":"برزیل","away_team_name_en":"Haiti","away_team_name_fa":"هائیتی"},{"_id":"679c9c8a5749c4077500e034","id":"34","home_team_id":"20","away_team_id":"18","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"E","matchday":"2","local_date":"06/20/2026 19:00","persian_date":"1405-03-30 19:00","stadium_id":"2","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Ecuador","home_team_name_fa":"اکوادور","away_team_name_en":"Curaçao","away_team_name_fa":"کوراسائو"},{"_id":"679c9c8a5749c4077500e054","id":"54","home_team_id":"8","away_team_id":"5","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"B","matchday":"3","local_date":"06/25/2026 18:00","persian_date":"1405-04-04 18:00","stadium_id":"6","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Switzerland","home_team_name_fa":"سوئیس","away_team_name_en":"Canada","away_team_name_fa":"کانادا"},{"_id":"679c9c8a5749c4077500e056","id":"56","home_team_id":"20","away_team_id":"17","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"E","matchday":"3","local_date":"06/25/2026 16:00","persian_date":"1405-04-04 16:00","stadium_id":"8","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Ecuador","home_team_name_fa":"اکوادور","away_team_name_en":"Germany","away_team_name_fa":"آلمان"},{"_id":"679c9c8a5749c4077500e057","id":"57","home_team_id":"14","away_team_id":"15","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"D","matchday":"3","local_date":"06/25/2026 19:00","persian_date":"1405-04-04 19:00","stadium_id":"9","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Paraguay","home_team_name_fa":"پاراگوئه","away_team_name_en":"Australia","away_team_name_fa":"استرالیا"},{"_id":"679c9c8a5749c4077500e064","id":"64","home_team_id":"28","away_team_id":"25","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"G","matchday":"3","local_date":"06/26/2026 20:00","persian_date":"1405-04-05 20:00","stadium_id":"16","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"New Zealand","home_team_name_fa":"نیوزیلند","away_team_name_en":"Belgium","away_team_name_fa":"بلژیک"},{"_id":"679c9c8a5749c4077500e067","id":"67","home_team_id":"48","away_team_id":"45","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"L","matchday":"3","local_date":"06/27/2026 17:00","persian_date":"1405-04-06 17:00","stadium_id":"3","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Panama","home_team_name_fa":"پاناما","away_team_name_en":"England","away_team_name_fa":"انگلستان"},{"_id":"679c9c8a5749c4077500e068","id":"68","home_team_id":"46","away_team_id":"47","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"L","matchday":"3","local_date":"06/27/2026 17:00","persian_date":"1405-04-06 17:00","stadium_id":"4","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Croatia","home_team_name_fa":"کرواسی","away_team_name_en":"Ghana","away_team_name_fa":"غنا"},{"_id":"679c9c8a5749c4077500e069","id":"69","home_team_id":"38","away_team_id":"39","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"J","matchday":"3","local_date":"06/27/2026 20:00","persian_date":"1405-04-06 20:00","stadium_id":"5","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Algeria","home_team_name_fa":"الجزایر","away_team_name_en":"Austria","away_team_name_fa":"اتریش"},{"_id":"679c9c8a5749c4077500e006","id":"6","home_team_id":"15","away_team_id":"16","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"D","matchday":"1","local_date":"06/13/2026 12:00","persian_date":"1405-03-23 12:00","stadium_id":"6","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Australia","home_team_name_fa":"استرالیا","away_team_name_en":"Turkey","away_team_name_fa":"ترکیه"},{"_id":"679c9c8a5749c4077500e010","id":"10","home_team_id":"17","away_team_id":"18","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"E","matchday":"1","local_date":"06/14/2026 12:00","persian_date":"1405-03-24 12:00","stadium_id":"10","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Germany","home_team_name_fa":"آلمان","away_team_name_en":"Curaçao","away_team_name_fa":"کوراسائو"},{"_id":"679c9c8a5749c4077500e012","id":"12","home_team_id":"23","away_team_id":"24","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"F","matchday":"1","local_date":"06/14/2026 21:00","persian_date":"1405-03-24 21:00","stadium_id":"12","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Sweden","home_team_name_fa":"سوئد","away_team_name_en":"Tunisia","away_team_name_fa":"تونس"},{"_id":"679c9c8a5749c4077500e027","id":"27","home_team_id":"5","away_team_id":"7","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"B","matchday":"2","local_date":"06/18/2026 15:00","persian_date":"1405-03-28 15:00","stadium_id":"11","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Canada","home_team_name_fa":"کانادا","away_team_name_en":"Qatar","away_team_name_fa":"قطر"},{"_id":"679c9c8a5749c4077500e030","id":"30","home_team_id":"12","away_team_id":"10","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"C","matchday":"2","local_date":"06/19/2026 18:00","persian_date":"1405-03-29 18:00","stadium_id":"14","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Scotland","home_team_name_fa":"اسکاتلند","away_team_name_en":"Morocco","away_team_name_fa":"مراکش"},{"_id":"679c9c8a5749c4077500e032","id":"32","home_team_id":"16","away_team_id":"14","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"D","matchday":"2","local_date":"06/19/2026 15:00","persian_date":"1405-03-29 15:00","stadium_id":"16","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Turkey","home_team_name_fa":"ترکیه","away_team_name_en":"Paraguay","away_team_name_fa":"پاراگوئه"},{"_id":"679c9c8a5749c4077500e037","id":"37","home_team_id":"25","away_team_id":"27","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"G","matchday":"2","local_date":"06/21/2026 15:00","persian_date":"1405-03-31 15:00","stadium_id":"5","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Belgium","home_team_name_fa":"بلژیک","away_team_name_en":"Iran","away_team_name_fa":"ایران"},{"_id":"679c9c8a5749c4077500e049","id":"49","home_team_id":"12","away_team_id":"9","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"C","matchday":"3","local_date":"06/24/2026 18:00","persian_date":"1405-04-03 18:00","stadium_id":"1","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Scotland","home_team_name_fa":"اسکاتلند","away_team_name_en":"Brazil","away_team_name_fa":"برزیل"},{"_id":"679c9c8a5749c4077500e051","id":"51","home_team_id":"2","away_team_id":"3","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"A","matchday":"3","local_date":"06/24/2026 19:00","persian_date":"1405-04-03 19:00","stadium_id":"3","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"South Africa","home_team_name_fa":"آفریقای جنوبی","away_team_name_en":"South Korea","away_team_name_fa":"کره جنوبی"},{"_id":"679c9c8a5749c4077500e053","id":"53","home_team_id":"6","away_team_id":"7","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"B","matchday":"3","local_date":"06/25/2026 18:00","persian_date":"1405-04-04 18:00","stadium_id":"5","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Bosnia and Herzegovina","home_team_name_fa":"بوسنی و هرزگوین","away_team_name_en":"Qatar","away_team_name_fa":"قطر"},{"_id":"679c9c8a5749c4077500e058","id":"58","home_team_id":"16","away_team_id":"13","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"D","matchday":"3","local_date":"06/25/2026 19:00","persian_date":"1405-04-04 19:00","stadium_id":"10","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Turkey","home_team_name_fa":"ترکیه","away_team_name_en":"United States","away_team_name_fa":"آمریکا"},{"_id":"679c9c8a5749c4077500e063","id":"63","home_team_id":"26","away_team_id":"27","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"G","matchday":"3","local_date":"06/26/2026 20:00","persian_date":"1405-04-05 20:00","stadium_id":"15","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Egypt","home_team_name_fa":"مصر","away_team_name_en":"Iran","away_team_name_fa":"ایران"},{"_id":"679c9c8a5749c4077500e002","id":"2","home_team_id":"3","away_team_id":"4","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"A","matchday":"1","local_date":"06/11/2026 20:00","persian_date":"1405-03-21 20:00","stadium_id":"2","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"South Korea","home_team_name_fa":"کره جنوبی","away_team_name_en":"Czech Republic","away_team_name_fa":"جمهوری چک"},{"_id":"679c9c8a5749c4077500e004","id":"4","home_team_id":"13","away_team_id":"14","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"D","matchday":"1","local_date":"06/12/2026 18:00","persian_date":"1405-03-22 18:00","stadium_id":"4","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"United States","home_team_name_fa":"آمریکا","away_team_name_en":"Paraguay","away_team_name_fa":"پاراگوئه"},{"_id":"679c9c8a5749c4077500e017","id":"17","home_team_id":"33","away_team_id":"34","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"I","matchday":"1","local_date":"06/16/2026 15:00","persian_date":"1405-03-26 15:00","stadium_id":"1","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"France","home_team_name_fa":"فرانسه","away_team_name_en":"Senegal","away_team_name_fa":"سنگال"},{"_id":"679c9c8a5749c4077500e043","id":"43","home_team_id":"37","away_team_id":"39","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"J","matchday":"2","local_date":"06/22/2026 20:00","persian_date":"1405-04-01 20:00","stadium_id":"11","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Argentina","home_team_name_fa":"آرژانتین","away_team_name_en":"Austria","away_team_name_fa":"اتریش"},{"_id":"679c9c8a5749c4077500e065","id":"65","home_team_id":"30","away_team_id":"31","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"H","matchday":"3","local_date":"06/27/2026 17:00","persian_date":"1405-04-06 17:00","stadium_id":"1","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Cape Verde","home_team_name_fa":"کیپ ورد","away_team_name_en":"Saudi Arabia","away_team_name_fa":"عربستان"},{"_id":"679c9c8a5749c4077500e066","id":"66","home_team_id":"32","away_team_id":"29","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"H","matchday":"3","local_date":"06/27/2026 17:00","persian_date":"1405-04-06 17:00","stadium_id":"2","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Uruguay","home_team_name_fa":"اروگوئه","away_team_name_en":"Spain","away_team_name_fa":"اسپانیا"},{"_id":"679c9c8a5749c4077500e070","id":"70","home_team_id":"40","away_team_id":"37","home_score":"0","away_score":"0","home_scorers":"null","away_scorers":"null","group":"J","matchday":"3","local_date":"06/27/2026 20:00","persian_date":"1405-04-06 20:00","stadium_id":"6","finished":"FALSE","time_elapsed":"notstarted","type":"group","home_team_name_en":"Jordan","home_team_name_fa":"اردن","away_team_name_en":"Argentina","away_team_name_fa":"آرژانتین"}]};
+window.__STATIC_API_TEAMS__ = {"teams":[{"_id":"679c9c6b5749c4077500ea02","name_en":"South Africa","name_fa":"آفریقای جنوبی","flag":"https://flagcdn.com/w80/za.png","fifa_code":"RSA","iso2":"ZA","groups":"A","id":"2"},{"_id":"679c9c6b5749c4077500ea09","name_en":"Brazil","name_fa":"برزیل","flag":"https://flagcdn.com/w80/br.png","fifa_code":"BRA","iso2":"BR","groups":"C","id":"9"},{"_id":"679c9c6b5749c4077500ea12","name_en":"Scotland","name_fa":"اسکاتلند","flag":"https://flagcdn.com/w80/gb-sct.png","fifa_code":"SCO","iso2":"SCO","groups":"C","id":"12"},{"_id":"679c9c6b5749c4077500ea16","name_en":"Turkey","name_fa":"ترکیه","flag":"https://flagcdn.com/w80/tr.png","fifa_code":"TUR","iso2":"TR","groups":"D","id":"16"},{"_id":"679c9c6b5749c4077500ea19","name_en":"Ivory Coast","name_fa":"ساحل عاج","flag":"https://flagcdn.com/w80/ci.png","fifa_code":"CIV","iso2":"CI","groups":"E","id":"19"},{"_id":"679c9c6b5749c4077500ea21","name_en":"Netherlands","name_fa":"هلند","flag":"https://flagcdn.com/w80/nl.png","fifa_code":"NED","iso2":"NL","groups":"F","id":"21"},{"_id":"679c9c6b5749c4077500ea30","name_en":"Cape Verde","name_fa":"کیپ ورد","flag":"https://flagcdn.com/w80/cv.png","fifa_code":"CPV","iso2":"CV","groups":"H","id":"30"},{"_id":"679c9c6b5749c4077500ea33","name_en":"France","name_fa":"فرانسه","flag":"https://flagcdn.com/w80/fr.png","fifa_code":"FRA","iso2":"FR","groups":"I","id":"33"},{"_id":"679c9c6b5749c4077500ea24","name_en":"Tunisia","name_fa":"تونس","flag":"https://flagcdn.com/w80/tn.png","fifa_code":"TUN","iso2":"TN","groups":"F","id":"24"},{"_id":"679c9c6b5749c4077500ea26","name_en":"Egypt","name_fa":"مصر","flag":"https://flagcdn.com/w80/eg.png","fifa_code":"EGY","iso2":"EG","groups":"G","id":"26"},{"_id":"679c9c6b5749c4077500ea35","name_en":"Iraq","name_fa":"عراق","flag":"https://flagcdn.com/w80/iq.png","fifa_code":"IRQ","iso2":"IQ","groups":"I","id":"35"},{"_id":"679c9c6b5749c4077500ea41","name_en":"Portugal","name_fa":"پرتغال","flag":"https://flagcdn.com/w80/pt.png","fifa_code":"POR","iso2":"PT","groups":"K","id":"41"},{"_id":"679c9c6b5749c4077500ea43","name_en":"Uzbekistan","name_fa":"ازبکستان","flag":"https://flagcdn.com/w80/uz.png","fifa_code":"UZB","iso2":"UZ","groups":"K","id":"43"},{"_id":"679c9c6b5749c4077500ea44","name_en":"Colombia","name_fa":"کلمبیا","flag":"https://flagcdn.com/w80/co.png","fifa_code":"COL","iso2":"CO","groups":"K","id":"44"},{"_id":"679c9c6b5749c4077500ea20","name_en":"Ecuador","name_fa":"اکوادور","flag":"https://flagcdn.com/w80/ec.png","fifa_code":"ECU","iso2":"EC","groups":"E","id":"20"},{"_id":"679c9c6b5749c4077500ea22","name_en":"Japan","name_fa":"ژاپن","flag":"https://flagcdn.com/w80/jp.png","fifa_code":"JPN","iso2":"JP","groups":"F","id":"22"},{"_id":"679c9c6b5749c4077500ea28","name_en":"New Zealand","name_fa":"نیوزیلند","flag":"https://flagcdn.com/w80/nz.png","fifa_code":"NZL","iso2":"NZ","groups":"G","id":"28"},{"_id":"679c9c6b5749c4077500ea31","name_en":"Saudi Arabia","name_fa":"عربستان","flag":"https://flagcdn.com/w80/sa.png","fifa_code":"KSA","iso2":"SA","groups":"H","id":"31"},{"_id":"679c9c6b5749c4077500ea39","name_en":"Austria","name_fa":"اتریش","flag":"https://flagcdn.com/w80/at.png","fifa_code":"AUT","iso2":"AT","groups":"J","id":"39"},{"_id":"679c9c6b5749c4077500ea47","name_en":"Ghana","name_fa":"غنا","flag":"https://flagcdn.com/w80/gh.png","fifa_code":"GHA","iso2":"GH","groups":"L","id":"47"},{"_id":"679c9c6b5749c4077500ea03","name_en":"South Korea","name_fa":"کره جنوبی","flag":"https://flagcdn.com/w80/kr.png","fifa_code":"KOR","iso2":"KR","groups":"A","id":"3"},{"_id":"679c9c6b5749c4077500ea29","name_en":"Spain","name_fa":"اسپانیا","flag":"https://flagcdn.com/w80/es.png","fifa_code":"ESP","iso2":"ES","groups":"H","id":"29"},{"_id":"679c9c6b5749c4077500ea36","name_en":"Norway","name_fa":"نروژ","flag":"https://flagcdn.com/w80/no.png","fifa_code":"NOR","iso2":"NO","groups":"I","id":"36"},{"_id":"679c9c6b5749c4077500ea37","name_en":"Argentina","name_fa":"آرژانتین","flag":"https://flagcdn.com/w80/ar.png","fifa_code":"ARG","iso2":"AR","groups":"J","id":"37"},{"_id":"679c9c6b5749c4077500ea42","name_en":"Democratic Republic of the Congo","name_fa":"جمهوری دموکراتیک کنگو","flag":"https://flagcdn.com/w80/cd.png","fifa_code":"COD","iso2":"CD","groups":"K","id":"42"},{"_id":"679c9c6b5749c4077500ea45","name_en":"England","name_fa":"انگلستان","flag":"https://flagcdn.com/w80/gb-eng.png","fifa_code":"ENG","iso2":"ENG","groups":"L","id":"45"},{"_id":"679c9c6b5749c4077500ea04","name_en":"Czech Republic","name_fa":"جمهوری چک","flag":"https://flagcdn.com/w80/cz.png","fifa_code":"CZE","iso2":"CZ","groups":"A","id":"4"},{"_id":"679c9c6b5749c4077500ea05","name_en":"Canada","name_fa":"کانادا","flag":"https://flagcdn.com/w80/ca.png","fifa_code":"CAN","iso2":"CA","groups":"B","id":"5"},{"_id":"679c9c6b5749c4077500ea07","name_en":"Qatar","name_fa":"قطر","flag":"https://flagcdn.com/w80/qa.png","fifa_code":"QAT","iso2":"QA","groups":"B","id":"7"},{"_id":"679c9c6b5749c4077500ea08","name_en":"Switzerland","name_fa":"سوئیس","flag":"https://flagcdn.com/w80/ch.png","fifa_code":"SUI","iso2":"CH","groups":"B","id":"8"},{"_id":"679c9c6b5749c4077500ea10","name_en":"Morocco","name_fa":"مراکش","flag":"https://flagcdn.com/w80/ma.png","fifa_code":"MAR","iso2":"MA","groups":"C","id":"10"},{"_id":"679c9c6b5749c4077500ea14","name_en":"Paraguay","name_fa":"پاراگوئه","flag":"https://flagcdn.com/w80/py.png","fifa_code":"PAR","iso2":"PY","groups":"D","id":"14"},{"_id":"679c9c6b5749c4077500ea18","name_en":"Curaçao","name_fa":"کوراسائو","flag":"https://flagcdn.com/w80/cw.png","fifa_code":"CUW","iso2":"CW","groups":"E","id":"18"},{"_id":"679c9c6b5749c4077500ea23","name_en":"Sweden","name_fa":"سوئد","flag":"https://flagcdn.com/w80/se.png","fifa_code":"SWE","iso2":"SE","groups":"F","id":"23"},{"_id":"679c9c6b5749c4077500ea38","name_en":"Algeria","name_fa":"الجزایر","flag":"https://flagcdn.com/w80/dz.png","fifa_code":"ALG","iso2":"DZ","groups":"J","id":"38"},{"_id":"679c9c6b5749c4077500ea40","name_en":"Jordan","name_fa":"اردن","flag":"https://flagcdn.com/w80/jo.png","fifa_code":"JOR","iso2":"JO","groups":"J","id":"40"},{"_id":"679c9c6b5749c4077500ea11","name_en":"Haiti","name_fa":"هائیتی","flag":"https://flagcdn.com/w80/ht.png","fifa_code":"HAI","iso2":"HT","groups":"C","id":"11"},{"_id":"679c9c6b5749c4077500ea17","name_en":"Germany","name_fa":"آلمان","flag":"https://flagcdn.com/w80/de.png","fifa_code":"GER","iso2":"DE","groups":"E","id":"17"},{"_id":"679c9c6b5749c4077500ea32","name_en":"Uruguay","name_fa":"اروگوئه","flag":"https://flagcdn.com/w80/uy.png","fifa_code":"URU","iso2":"UY","groups":"H","id":"32"},{"_id":"679c9c6b5749c4077500ea34","name_en":"Senegal","name_fa":"سنگال","flag":"https://flagcdn.com/w80/sn.png","fifa_code":"SEN","iso2":"SN","groups":"I","id":"34"},{"_id":"679c9c6b5749c4077500ea48","name_en":"Panama","name_fa":"پاناما","flag":"https://flagcdn.com/w80/pa.png","fifa_code":"PAN","iso2":"PA","groups":"L","id":"48"},{"_id":"679c9c6b5749c4077500ea01","name_en":"Mexico","name_fa":"مکزیک","flag":"https://flagcdn.com/w80/mx.png","fifa_code":"MEX","iso2":"MX","groups":"A","id":"1"},{"_id":"679c9c6b5749c4077500ea06","name_en":"Bosnia and Herzegovina","name_fa":"بوسنی و هرزگوین","flag":"https://flagcdn.com/w80/ba.png","fifa_code":"BIH","iso2":"BA","groups":"B","id":"6"},{"_id":"679c9c6b5749c4077500ea13","name_en":"United States","name_fa":"آمریکا","flag":"https://flagcdn.com/w80/us.png","fifa_code":"USA","iso2":"US","groups":"D","id":"13"},{"_id":"679c9c6b5749c4077500ea15","name_en":"Australia","name_fa":"استرالیا","flag":"https://flagcdn.com/w80/au.png","fifa_code":"AUS","iso2":"AU","groups":"D","id":"15"},{"_id":"679c9c6b5749c4077500ea25","name_en":"Belgium","name_fa":"بلژیک","flag":"https://flagcdn.com/w80/be.png","fifa_code":"BEL","iso2":"BE","groups":"G","id":"25"},{"_id":"679c9c6b5749c4077500ea27","name_en":"Iran","name_fa":"ایران","flag":"https://flagcdn.com/w80/ir.png","fifa_code":"IRN","iso2":"IR","groups":"G","id":"27"},{"_id":"679c9c6b5749c4077500ea46","name_en":"Croatia","name_fa":"کرواسی","flag":"https://flagcdn.com/w80/hr.png","fifa_code":"CRO","iso2":"HR","groups":"L","id":"46"}]};
+window.__STATIC_API_STADIUMS__ = {"stadiums":[{"_id":"679c9c8a5749c4077500f014","id":"14","name_en":"Lumen Field","name_fa":"استادیوم لومن فیلد","fifa_name":"Seattle Stadium","city_en":"Seattle","city_fa":"سیاتل","country_en":"United States","country_fa":"آمریکا","capacity":69000,"region":"Western"},{"_id":"679c9c8a5749c4077500f008","id":"8","name_en":"Hard Rock Stadium","name_fa":"استادیوم هارد راک","fifa_name":"Miami Stadium","city_en":"Miami (Miami Gardens)","city_fa":"میامی","country_en":"United States","country_fa":"آمریکا","capacity":65000,"region":"Eastern"},{"_id":"679c9c8a5749c4077500f013","id":"13","name_en":"BC Place","name_fa":"استادیوم بی‌سی پلیس","fifa_name":"BC Place Vancouver","city_en":"Vancouver","city_fa":"ونکوور","country_en":"Canada","country_fa":"کانادا","capacity":54000,"region":"Western"},{"_id":"679c9c8a5749c4077500f015","id":"15","name_en":"Levi's Stadium","name_fa":"استادیوم لیوایز","fifa_name":"San Francisco Bay Area Stadium","city_en":"San Francisco Bay Area (Santa Clara)","city_fa":"سن‌فرانسیسکو","country_en":"United States","country_fa":"آمریکا","capacity":71000,"region":"Western"},{"_id":"679c9c8a5749c4077500f003","id":"3","name_en":"Estadio BBVA","name_fa":"استادیوم بی‌بی‌وی‌ای","fifa_name":"Estadio Monterrey","city_en":"Monterrey (Guadalupe)","city_fa":"مونتری","country_en":"Mexico","country_fa":"مکزیک","capacity":53500,"region":"Central"},{"_id":"679c9c8a5749c4077500f001","id":"1","name_en":"Estadio Azteca","name_fa":"استادیوم آزتکا","fifa_name":"Mexico City Stadium","city_en":"Mexico City","city_fa":"مکزیکوسیتی","country_en":"Mexico","country_fa":"مکزیک","capacity":83000,"region":"Central"},{"_id":"679c9c8a5749c4077500f002","id":"2","name_en":"Estadio Akron","name_fa":"استادیوم آکرون","fifa_name":"Estadio Guadalajara","city_en":"Guadalajara (Zapopan)","city_fa":"گوادالاخارا","country_en":"Mexico","country_fa":"مکزیک","capacity":48000,"region":"Central"},{"_id":"679c9c8a5749c4077500f005","id":"5","name_en":"NRG Stadium","name_fa":"استادیوم ان‌آر‌جی","fifa_name":"Houston Stadium","city_en":"Houston","city_fa":"هیوستون","country_en":"United States","country_fa":"آمریکا","capacity":72000,"region":"Central"},{"_id":"679c9c8a5749c4077500f016","id":"16","name_en":"SoFi Stadium","name_fa":"استادیوم سوفای","fifa_name":"Los Angeles Stadium","city_en":"Los Angeles (Inglewood)","city_fa":"لس‌آنجلس","country_en":"United States","country_fa":"آمریکا","capacity":70000,"region":"Western"},{"_id":"679c9c8a5749c4077500f007","id":"7","name_en":"Mercedes-Benz Stadium","name_fa":"استادیوم مرسدس بنز","fifa_name":"Atlanta Stadium","city_en":"Atlanta","city_fa":"آتلانتا","country_en":"United States","country_fa":"آمریکا","capacity":75000,"region":"Eastern"},{"_id":"679c9c8a5749c4077500f009","id":"9","name_en":"Gillette Stadium","name_fa":"استادیوم ژیلت","fifa_name":"Boston Stadium","city_en":"Boston (Foxborough)","city_fa":"بوستون","country_en":"United States","country_fa":"آمریکا","capacity":65000,"region":"Eastern"},{"_id":"679c9c8a5749c4077500f006","id":"6","name_en":"GEHA Field at Arrowhead Stadium","name_fa":"استادیوم اروهد","fifa_name":"Kansas City Stadium","city_en":"Kansas City","city_fa":"کانزاس سیتی","country_en":"United States","country_fa":"آمریکا","capacity":73000,"region":"Central"},{"_id":"679c9c8a5749c4077500f010","id":"10","name_en":"Lincoln Financial Field","name_fa":"استادیوم لینکلن فایننشال","fifa_name":"Philadelphia Stadium","city_en":"Philadelphia","city_fa":"فیلادلفیا","country_en":"United States","country_fa":"آمریکا","capacity":69000,"region":"Eastern"},{"_id":"679c9c8a5749c4077500f004","id":"4","name_en":"AT&T Stadium","name_fa":"استادیوم ای‌تی‌اند‌تی","fifa_name":"Dallas Stadium","city_en":"Dallas (Arlington, Texas)","city_fa":"دالاس","country_en":"United States","country_fa":"آمریکا","capacity":94000,"region":"Central"},{"_id":"679c9c8a5749c4077500f011","id":"11","name_en":"MetLife Stadium","name_fa":"استادیوم متلایف","fifa_name":"New York/New Jersey Stadium","city_en":"New York/New Jersey (East Rutherford)","city_fa":"نیویورک/نیوجرسی","country_en":"United States","country_fa":"آمریکا","capacity":82500,"region":"Eastern"},{"_id":"679c9c8a5749c4077500f012","id":"12","name_en":"BMO Field","name_fa":"استادیوم بی‌ام‌او","fifa_name":"Toronto Stadium","city_en":"Toronto","city_fa":"تورنتو","country_en":"Canada","country_fa":"کانادا","capacity":45000,"region":"Eastern"}]};
+
+/* ============================================================
+   SECTION 0: Global Config & Constants
+   ============================================================ */
+const CONFIG = {
+  // Auto-detect API base:
+  //   localhost      → /api (server.js 代理)
+  //   file://        → 直连 (无论如何 CORS 都会拦，仅作提示)
+  //   线上部署        → /api (Cloudflare Pages Functions 代理)
+  API_BASE: (function() {
+    if (typeof window === 'undefined') return 'https://worldcup26.ir';
+    if (window.location.protocol === 'file:') return 'https://worldcup26.ir';
+    return '/api';
+  })(),
+  MATCHES_TTL: 2 * 60 * 60 * 1000,     // 2h
+  JWT_TTL: 24 * 60 * 60 * 1000,        // 24h
+  LIVE_POLL_INTERVAL: 60000,            // 60s
+  SEARCH_DEBOUNCE: 300,                 // ms
+  SITE_URL: 'https://worldcup26travel.com',
+  OG_IMAGE: '/og-image.png',
+};
+
+/* ============================================================
+   SECTION 1: Static Data — Cities, Stadiums, Teams, i18n
+   ============================================================ */
+
+const CITIES = [
+  { id:'mexico_city',     name:{en:'Mexico City',zh:'墨西哥城'},     country:{en:'Mexico',zh:'墨西哥'}, countryCode:'MX', elevation:2250, timezoneOffset:-6, coordinates:{lat:19.43,lng:-99.13},  climate:{avgTempHigh:26,avgTempLow:14,avgHumidity:60,rainProbability:40}, hostedMatches:5,  description:{en:'One of the world\'s largest cities, sitting at 2,250m above sea level. Home to the legendary Estadio Azteca.',zh:'世界最大城市之一，海拔2250米，传奇的阿兹特克球场所在地。'} },
+  { id:'guadalajara',     name:{en:'Guadalajara',zh:'瓜达拉哈拉'},   country:{en:'Mexico',zh:'墨西哥'}, countryCode:'MX', elevation:1566, timezoneOffset:-6, coordinates:{lat:20.66,lng:-103.35}, climate:{avgTempHigh:31,avgTempLow:16,avgHumidity:55,rainProbability:35}, hostedMatches:4,  description:{en:'Mexico\'s cultural heartland, famous for mariachi and tequila. Higher elevation brings cooler evenings.',zh:'墨西哥文化中心，以马里亚奇音乐和龙舌兰酒闻名。高海拔带来凉爽的夜晚。'} },
+  { id:'monterrey',       name:{en:'Monterrey',zh:'蒙特雷'},         country:{en:'Mexico',zh:'墨西哥'}, countryCode:'MX', elevation:540,  timezoneOffset:-6, coordinates:{lat:25.68,lng:-100.31}, climate:{avgTempHigh:35,avgTempLow:22,avgHumidity:60,rainProbability:25}, hostedMatches:4,  description:{en:'Mexico\'s industrial powerhouse, surrounded by dramatic mountain scenery.',zh:'墨西哥工业重镇，周围环绕壮观的山景。'} },
+  { id:'los_angeles',     name:{en:'Los Angeles',zh:'洛杉矶'},       country:{en:'United States',zh:'美国'}, countryCode:'US', elevation:93,   timezoneOffset:-8, coordinates:{lat:33.94,lng:-118.41}, climate:{avgTempHigh:27,avgTempLow:17,avgHumidity:65,rainProbability:2},  hostedMatches:5,  description:{en:'Entertainment capital with near-perfect summer weather. SoFi Stadium is one of the most advanced venues.',zh:'娱乐之都，夏季天气近乎完美。SoFi体育场是最先进的场馆之一。'} },
+  { id:'san_francisco',   name:{en:'San Francisco',zh:'旧金山'},     country:{en:'United States',zh:'美国'}, countryCode:'US', elevation:16,   timezoneOffset:-8, coordinates:{lat:37.71,lng:-122.15}, climate:{avgTempHigh:22,avgTempLow:13,avgHumidity:70,rainProbability:5},  hostedMatches:5,  description:{en:'Cool summers by the bay. Levi\'s Stadium in Santa Clara hosts World Cup matches with a distinctly Bay Area vibe.',zh:'海湾边的凉爽夏季。Levi\'s体育场将以独特的湾区风情迎接世界杯比赛。'} },
+  { id:'seattle',         name:{en:'Seattle',zh:'西雅图'},           country:{en:'United States',zh:'美国'}, countryCode:'US', elevation:53,   timezoneOffset:-8, coordinates:{lat:47.60,lng:-122.33}, climate:{avgTempHigh:24,avgTempLow:13,avgHumidity:65,rainProbability:20}, hostedMatches:5,  description:{en:'Emerald City with mild summer temperatures. Lumen Field is renowned for its electric atmosphere.',zh:'翡翠之城，夏季温和。Lumen球场以其电力十足的氛围闻名。'} },
+  { id:'vancouver',       name:{en:'Vancouver',zh:'温哥华'},         country:{en:'Canada',zh:'加拿大'},     countryCode:'CA', elevation:2,    timezoneOffset:-8, coordinates:{lat:49.28,lng:-123.12}, climate:{avgTempHigh:22,avgTempLow:13,avgHumidity:70,rainProbability:25}, hostedMatches:5,  description:{en:'Stunning coastal city with mountain backdrop. BC Place features a retractable roof.',zh:'令人惊叹的海滨城市，背靠群山。BC Place拥有可伸缩屋顶。'} },
+  { id:'kansas_city',     name:{en:'Kansas City',zh:'堪萨斯城'},     country:{en:'United States',zh:'美国'}, countryCode:'US', elevation:277,  timezoneOffset:-6, coordinates:{lat:39.10,lng:-94.58},  climate:{avgTempHigh:31,avgTempLow:20,avgHumidity:68,rainProbability:30}, hostedMatches:5,  description:{en:'Heart of America with passionate soccer fans. Arrowhead Stadium is one of the loudest in the world.',zh:'美国心脏地带，拥有热情的足球迷。Arrowhead球场是世界上最响亮的球场之一。'} },
+  { id:'dallas',          name:{en:'Dallas',zh:'达拉斯'},           country:{en:'United States',zh:'美国'}, countryCode:'US', elevation:131,  timezoneOffset:-6, coordinates:{lat:32.90,lng:-97.04},  climate:{avgTempHigh:35,avgTempLow:24,avgHumidity:60,rainProbability:20}, hostedMatches:5,  description:{en:'Texas-sized everything, including the heat. AT&T Stadium is a massive indoor venue with AC.',zh:'德州的一切都很大，包括热量。AT&T体育场是配备空调的大型室内场馆。'} },
+  { id:'atlanta',         name:{en:'Atlanta',zh:'亚特兰大'},         country:{en:'United States',zh:'美国'}, countryCode:'US', elevation:320,  timezoneOffset:-5, coordinates:{lat:33.75,lng:-84.39},  climate:{avgTempHigh:31,avgTempLow:21,avgHumidity:68,rainProbability:35}, hostedMatches:5,  description:{en:'Southern hub with warm, humid summers. Mercedes-Benz Stadium has a unique retractable roof design.',zh:'南方枢纽，夏季温暖潮湿。Mercedes-Benz体育场拥有独特的可伸缩屋顶设计。'} },
+  { id:'houston',         name:{en:'Houston',zh:'休斯顿'},           country:{en:'United States',zh:'美国'}, countryCode:'US', elevation:13,   timezoneOffset:-6, coordinates:{lat:29.76,lng:-95.37},  climate:{avgTempHigh:34,avgTempLow:24,avgHumidity:70,rainProbability:30}, hostedMatches:5,  description:{en:'Space City with tropical summer conditions. NRG Stadium is fully air-conditioned.',zh:'太空之城，夏季热带气候。NRG体育场完全配备空调。'} },
+  { id:'miami',           name:{en:'Miami',zh:'迈阿密'},             country:{en:'United States',zh:'美国'}, countryCode:'US', elevation:2,    timezoneOffset:-5, coordinates:{lat:25.96,lng:-80.24},  climate:{avgTempHigh:32,avgTempLow:25,avgHumidity:72,rainProbability:45}, hostedMatches:5,  description:{en:'Sun, sea, and soccer. Hard Rock Stadium brings tropical flair to the World Cup.',zh:'阳光、大海和足球。Hard Rock体育场为世界杯带来热带风情。'} },
+  { id:'philadelphia',    name:{en:'Philadelphia',zh:'费城'},        country:{en:'United States',zh:'美国'}, countryCode:'US', elevation:12,   timezoneOffset:-5, coordinates:{lat:39.90,lng:-75.17},  climate:{avgTempHigh:30,avgTempLow:20,avgHumidity:65,rainProbability:30}, hostedMatches:5,  description:{en:'Historic city with passionate sports culture. Lincoln Financial Field is a fortress of noise.',zh:'历史名城，拥有狂热的体育文化。Lincoln Financial球场是噪音的堡垒。'} },
+  { id:'boston',          name:{en:'Boston',zh:'波士顿'},           country:{en:'United States',zh:'美国'}, countryCode:'US', elevation:43,   timezoneOffset:-5, coordinates:{lat:42.09,lng:-71.26},  climate:{avgTempHigh:27,avgTempLow:18,avgHumidity:65,rainProbability:28}, hostedMatches:5,  description:{en:'New England charm meets world-class soccer. Gillette Stadium offers a unique football experience.',zh:'新英格兰风情遇上世界级足球。Gillette体育场提供独特的足球体验。'} },
+  { id:'east_rutherford', name:{en:'East Rutherford',zh:'东卢瑟福'}, country:{en:'United States',zh:'美国'}, countryCode:'US', elevation:2,    timezoneOffset:-5, coordinates:{lat:40.81,lng:-74.07},  climate:{avgTempHigh:30,avgTempLow:20,avgHumidity:62,rainProbability:28}, hostedMatches:5,  description:{en:'Just outside NYC, MetLife Stadium is one of the largest venues in the tournament.',zh:'纽约市郊外，MetLife体育场是本届赛事最大的场馆之一。'} },
+  { id:'toronto',         name:{en:'Toronto',zh:'多伦多'},           country:{en:'Canada',zh:'加拿大'},     countryCode:'CA', elevation:76,   timezoneOffset:-5, coordinates:{lat:43.64,lng:-79.38},  climate:{avgTempHigh:27,avgTempLow:17,avgHumidity:65,rainProbability:30}, hostedMatches:4,  description:{en:'Canada\'s largest and most diverse city. BMO Field has been expanded for the World Cup.',zh:'加拿大最大、最多元的城市。BMO球场已为世界杯进行了扩建。'} }
+];
+
+const STADIUMS = [
+  { id:'azteca',          name:{en:'Estadio Azteca',zh:'阿兹特克球场'},            cityId:'mexico_city',     capacity:87523, opened:1966, description:{en:'Legendary stadium that has hosted two World Cup finals (1970, 1986). Will become the first to host three.',zh:'传奇球场，曾举办两届世界杯决赛（1970、1986）。将成为首个举办三届的球场。'}, funFact:{en:'First stadium to host 3 World Cups',zh:'首个举办三届世界杯的球场'} },
+  { id:'akron',           name:{en:'Estadio Akron',zh:'阿克伦球场'},                cityId:'guadalajara',     capacity:48071, opened:2010, description:{en:'Modern stadium nestled in a volcanic landscape. Home to Chivas, one of Mexico\'s most popular clubs.',zh:'坐落在火山地貌中的现代化球场。墨西哥最受欢迎俱乐部之一芝华士的主场。'}, funFact:{en:'Built on a volcano-like hilltop',zh:'建在火山般的山顶上'} },
+  { id:'bbva',            name:{en:'Estadio BBVA',zh:'BBVA球场'},                   cityId:'monterrey',       capacity:53500, opened:2015, description:{en:'Nicknamed "El Gigante de Acero" (The Steel Giant) for its striking metallic exterior with mountain views.',zh:'因其引人注目的金属外观和山景而被昵称为"钢铁巨人"。'}, funFact:{en:'Nicknamed The Steel Giant',zh:'昵称钢铁巨人'} },
+  { id:'sofi',            name:{en:'SoFi Stadium',zh:'SoFi体育场'},                cityId:'los_angeles',     capacity:70240, opened:2020, description:{en:'$5.5 billion mega-venue with a translucent roof and the world\'s largest video board.',zh:'价值55亿美元的超级场馆，拥有半透明屋顶和世界最大视频屏幕。'}, funFact:{en:'World\'s largest video board',zh:'世界最大视频屏幕'} },
+  { id:'levis',           name:{en:"Levi's Stadium",zh:"Levi's体育场"},            cityId:'san_francisco',   capacity:68500, opened:2014, description:{en:'Silicon Valley\'s premier venue with a green roof and sustainable design features.',zh:'硅谷顶级场馆，拥有绿色屋顶和可持续设计特色。'}, funFact:{en:'LEED Gold certified stadium',zh:'LEED金牌认证球场'} },
+  { id:'lumen',           name:{en:'Lumen Field',zh:'Lumen球场'},                  cityId:'seattle',         capacity:68740, opened:2002, description:{en:'Known for the "12th Man" — the loudest crowd in North American sports.',zh:'以"第12人"闻名——北美体育界最响亮的观众。'}, funFact:{en:'Recorded at 137.6 decibels',zh:'曾录得137.6分贝'} },
+  { id:'bc_place',        name:{en:'BC Place',zh:'BC Place'},                     cityId:'vancouver',       capacity:54320, opened:1983, description:{en:'Iconic retractable roof stadium on Vancouver\'s waterfront. Hosted 2015 Women\'s World Cup final.',zh:'温哥华滨水区的标志性可伸缩屋顶球场。曾举办2015年女足世界杯决赛。'}, funFact:{en:'Hosted 2015 WWC final',zh:'举办过2015女足世界杯决赛'} },
+  { id:'arrowhead',       name:{en:'Arrowhead Stadium',zh:'Arrowhead球场'},        cityId:'kansas_city',     capacity:76416, opened:1972, description:{en:'Historic NFL venue with a distinctive curved roof. Loudest outdoor stadium in the world by Guinness record.',zh:'历史悠久的NFL场馆，拥有独特的弧形屋顶。吉尼斯纪录中世界上最响亮的室外球场。'}, funFact:{en:'Guinness: loudest outdoor stadium',zh:'吉尼斯纪录最响室外球场'} },
+  { id:'at_t',            name:{en:'AT&T Stadium',zh:'AT&T体育场'},               cityId:'dallas',          capacity:80000, opened:2009, description:{en:'Jerry World — a massive domed stadium with retractable roof and colossal video screens.',zh:'Jerry World——巨大的穹顶球场，可伸缩屋顶和巨大视频屏幕。'}, funFact:{en:'Largest retractable roof stadium',zh:'最大可伸缩屋顶球场'} },
+  { id:'mercedes_benz',   name:{en:'Mercedes-Benz Stadium',zh:'Mercedes-Benz体育场'}, cityId:'atlanta',         capacity:71000, opened:2017, description:{en:'Futuristic stadium with a unique 8-petal retractable roof and a 360-degree halo video board.',zh:'未来派球场，独特的八瓣可伸缩屋顶和360度光环视频屏幕。'}, funFact:{en:'8-petal retractable roof',zh:'八瓣可伸缩屋顶'} },
+  { id:'nrg',             name:{en:'NRG Stadium',zh:'NRG体育场'},                 cityId:'houston',         capacity:72220, opened:2002, description:{en:'First NFL stadium with a retractable roof. Fully air-conditioned for Houston\'s summer heat.',zh:'首个配备可伸缩屋顶的NFL球场。完全空调应对休斯顿夏季高温。'}, funFact:{en:'Fully air-conditioned',zh:'全空调覆盖'} },
+  { id:'hard_rock',       name:{en:'Hard Rock Stadium',zh:'Hard Rock体育场'},      cityId:'miami',           capacity:65326, opened:1987, description:{en:'Recently renovated with a dramatic canopy roof. Tropical vibes for World Cup matches.',zh:'最近翻新，配有戏剧性的遮阳顶棚。世界杯比赛的热带风情。'}, funFact:{en:'Miami Open tennis also hosted here',zh:'迈阿密网球公开赛也在此举办'} },
+  { id:'lincoln',         name:{en:'Lincoln Financial Field',zh:'Lincoln Financial球场'}, cityId:'philadelphia',    capacity:69796, opened:2003, description:{en:'Home of the passionate Eagles fanbase. Known for its intense atmosphere.',zh:'狂热的老鹰队球迷之家。以其激烈的氛围闻名。'}, funFact:{en:'Built on former prison site',zh:'建在前监狱场地上'} },
+  { id:'gillette',        name:{en:'Gillette Stadium',zh:'Gillette体育场'},        cityId:'boston',          capacity:65878, opened:2002, description:{en:'New England\'s premier outdoor venue, surrounded by an open-air shopping and dining complex.',zh:'新英格兰顶级室外场馆，周围环绕露天购物和餐饮综合体。'}, funFact:{en:'Adjacent to Patriot Place complex',zh:'紧邻Patriot Place综合体'} },
+  { id:'metlife',         name:{en:'MetLife Stadium',zh:'MetLife体育场'},          cityId:'east_rutherford', capacity:82500, opened:2010, description:{en:'The largest-capacity venue in the tournament. Just across the Hudson from Manhattan.',zh:'本届赛事最大容量场馆。与曼哈顿仅隔哈德逊河。'}, funFact:{en:'Largest venue of WC26',zh:'WC26最大场馆'} },
+  { id:'bmo',             name:{en:'BMO Field',zh:'BMO球场'},                      cityId:'toronto',         capacity:45736, opened:2007, description:{en:'Expanded for the World Cup, BMO Field is Toronto\'s soccer cathedral on the Lake Ontario waterfront.',zh:'为世界杯扩建，BMO球场是多伦多安大略湖畔的足球大教堂。'}, funFact:{en:'On Lake Ontario waterfront',zh:'安大略湖畔'} }
+];
+
+const TEAMS = [
+  { id:'RSA', nameEn:'South Africa', nameZh:'南非',        flag:'🇿🇦', group:'A', fifaRank:60, confederation:'CAF' },
+  { id:'KOR', nameEn:'South Korea',  nameZh:'韩国',        flag:'🇰🇷', group:'A', fifaRank:22, confederation:'AFC' },
+  { id:'MEX', nameEn:'Mexico',       nameZh:'墨西哥',      flag:'🇲🇽', group:'A', fifaRank:15, confederation:'CONCACAF' },
+  { id:'CZE', nameEn:'Czech Republic',nameZh:'捷克',       flag:'🇨🇿', group:'A', fifaRank:34, confederation:'UEFA' },
+  { id:'CAN', nameEn:'Canada',       nameZh:'加拿大',      flag:'🇨🇦', group:'B', fifaRank:35, confederation:'CONCACAF' },
+  { id:'QAT', nameEn:'Qatar',        nameZh:'卡塔尔',      flag:'🇶🇦', group:'B', fifaRank:55, confederation:'AFC' },
+  { id:'SUI', nameEn:'Switzerland',  nameZh:'瑞士',        flag:'🇨🇭', group:'B', fifaRank:19, confederation:'UEFA' },
+  { id:'BIH', nameEn:'Bosnia and Herzegovina',nameZh:'波黑',flag:'🇧🇦',group:'B', fifaRank:74, confederation:'UEFA' },
+  { id:'BRA', nameEn:'Brazil',       nameZh:'巴西',        flag:'🇧🇷', group:'C', fifaRank:5,  confederation:'CONMEBOL' },
+  { id:'MAR', nameEn:'Morocco',      nameZh:'摩洛哥',      flag:'🇲🇦', group:'C', fifaRank:14, confederation:'CAF' },
+  { id:'SCO', nameEn:'Scotland',     nameZh:'苏格兰',      flag:'🏴󠁧󠁢󠁳󠁣󠁴󠁿', group:'C', fifaRank:45, confederation:'UEFA' },
+  { id:'HAI', nameEn:'Haiti',        nameZh:'海地',        flag:'🇭🇹', group:'C', fifaRank:85, confederation:'CONCACAF' },
+  { id:'USA', nameEn:'United States',nameZh:'美国',        flag:'🇺🇸', group:'D', fifaRank:13, confederation:'CONCACAF' },
+  { id:'TUR', nameEn:'Turkey',       nameZh:'土耳其',      flag:'🇹🇷', group:'D', fifaRank:40, confederation:'UEFA' },
+  { id:'PAR', nameEn:'Paraguay',     nameZh:'巴拉圭',      flag:'🇵🇾', group:'D', fifaRank:48, confederation:'CONMEBOL' },
+  { id:'AUS', nameEn:'Australia',    nameZh:'澳大利亚',    flag:'🇦🇺', group:'D', fifaRank:24, confederation:'AFC' },
+  { id:'GER', nameEn:'Germany',      nameZh:'德国',        flag:'🇩🇪', group:'E', fifaRank:10, confederation:'UEFA' },
+  { id:'ECU', nameEn:'Ecuador',      nameZh:'厄瓜多尔',    flag:'🇪🇨', group:'E', fifaRank:31, confederation:'CONMEBOL' },
+  { id:'CIV', nameEn:'Ivory Coast',  nameZh:'科特迪瓦',    flag:'🇨🇮', group:'E', fifaRank:46, confederation:'CAF' },
+  { id:'CUW', nameEn:'Curaçao',      nameZh:'库拉索',      flag:'🇨🇼', group:'E', fifaRank:91, confederation:'CONCACAF' },
+  { id:'NED', nameEn:'Netherlands',  nameZh:'荷兰',        flag:'🇳🇱', group:'F', fifaRank:7,  confederation:'UEFA' },
+  { id:'JPN', nameEn:'Japan',        nameZh:'日本',        flag:'🇯🇵', group:'F', fifaRank:20, confederation:'AFC' },
+  { id:'SWE', nameEn:'Sweden',       nameZh:'瑞典',        flag:'🇸🇪', group:'F', fifaRank:28, confederation:'UEFA' },
+  { id:'TUN', nameEn:'Tunisia',      nameZh:'突尼斯',      flag:'🇹🇳', group:'F', fifaRank:29, confederation:'CAF' },
+  { id:'BEL', nameEn:'Belgium',      nameZh:'比利时',      flag:'🇧🇪', group:'G', fifaRank:8,  confederation:'UEFA' },
+  { id:'EGY', nameEn:'Egypt',        nameZh:'埃及',        flag:'🇪🇬', group:'G', fifaRank:33, confederation:'CAF' },
+  { id:'IRN', nameEn:'Iran',         nameZh:'伊朗',        flag:'🇮🇷', group:'G', fifaRank:18, confederation:'AFC' },
+  { id:'NZL', nameEn:'New Zealand',  nameZh:'新西兰',      flag:'🇳🇿', group:'G', fifaRank:89, confederation:'OFC' },
+  { id:'ESP', nameEn:'Spain',        nameZh:'西班牙',      flag:'🇪🇸', group:'H', fifaRank:3,  confederation:'UEFA' },
+  { id:'URU', nameEn:'Uruguay',      nameZh:'乌拉圭',      flag:'🇺🇾', group:'H', fifaRank:11, confederation:'CONMEBOL' },
+  { id:'KSA', nameEn:'Saudi Arabia', nameZh:'沙特',        flag:'🇸🇦', group:'H', fifaRank:53, confederation:'AFC' },
+  { id:'CPV', nameEn:'Cape Verde',   nameZh:'佛得角',      flag:'🇨🇻', group:'H', fifaRank:72, confederation:'CAF' },
+  { id:'FRA', nameEn:'France',       nameZh:'法国',        flag:'🇫🇷', group:'I', fifaRank:2,  confederation:'UEFA' },
+  { id:'SEN', nameEn:'Senegal',      nameZh:'塞内加尔',    flag:'🇸🇳', group:'I', fifaRank:17, confederation:'CAF' },
+  { id:'NOR', nameEn:'Norway',       nameZh:'挪威',        flag:'🇳🇴', group:'I', fifaRank:43, confederation:'UEFA' },
+  { id:'IRQ', nameEn:'Iraq',         nameZh:'伊拉克',      flag:'🇮🇶', group:'I', fifaRank:68, confederation:'AFC' },
+  { id:'ARG', nameEn:'Argentina',    nameZh:'阿根廷',      flag:'🇦🇷', group:'J', fifaRank:1,  confederation:'CONMEBOL' },
+  { id:'AUT', nameEn:'Austria',      nameZh:'奥地利',      flag:'🇦🇹', group:'J', fifaRank:25, confederation:'UEFA' },
+  { id:'ALG', nameEn:'Algeria',      nameZh:'阿尔及利亚',  flag:'🇩🇿', group:'J', fifaRank:44, confederation:'CAF' },
+  { id:'JOR', nameEn:'Jordan',       nameZh:'约旦',        flag:'🇯🇴', group:'J', fifaRank:64, confederation:'AFC' },
+  { id:'POR', nameEn:'Portugal',     nameZh:'葡萄牙',      flag:'🇵🇹', group:'K', fifaRank:6,  confederation:'UEFA' },
+  { id:'COL', nameEn:'Colombia',     nameZh:'哥伦比亚',    flag:'🇨🇴', group:'K', fifaRank:16, confederation:'CONMEBOL' },
+  { id:'UZB', nameEn:'Uzbekistan',   nameZh:'乌兹别克斯坦',flag:'🇺🇿', group:'K', fifaRank:58, confederation:'AFC' },
+  { id:'COD', nameEn:'Democratic Republic of the Congo',nameZh:'刚果民主共和国',flag:'🇨🇩',group:'K', fifaRank:56, confederation:'CAF' },
+  { id:'ENG', nameEn:'England',      nameZh:'英格兰',      flag:'🏴󠁧󠁢󠁥󠁮󠁧󠁿', group:'L', fifaRank:4,  confederation:'UEFA' },
+  { id:'CRO', nameEn:'Croatia',      nameZh:'克罗地亚',    flag:'🇭🇷', group:'L', fifaRank:12, confederation:'UEFA' },
+  { id:'GHA', nameEn:'Ghana',        nameZh:'加纳',        flag:'🇬🇭', group:'L', fifaRank:68, confederation:'CAF' },
+  { id:'PAN', nameEn:'Panama',       nameZh:'巴拿马',      flag:'🇵🇦', group:'L', fifaRank:52, confederation:'CONCACAF' },
+];
+
+const I18N = {
+  en: {
+    siteTitle:'WC26 Travel Tracker', siteSubtitle:'Team Fatigue & Schedule',
+    loading:'Loading...', error:'Something went wrong', retry:'Retry',
+    navDashboard:'Dashboard', navTeams:'Team Travel', navMatches:'Match Schedule', navVenues:'Cities & Stadiums',
+    dashFatigueRank:'Fatigue Ranking', dashFatigueRankDesc:'Which teams have the hardest travel schedule? Based on distance, elevation, timezone changes, and rest intervals.',
+    dashTopFatigue:'Most Fatigued Teams', dashComfortable:'Most Comfortable Teams', dashUpcoming:'Upcoming Matches',
+    dashKeyStats:'Key Statistics', dashTotalDistance:'Total Distance', dashAvgFatigue:'Average Fatigue',
+    dashTeamsTracked:'Teams Tracked', dashHostCities:'Host Cities',
+    teamTableHeader:'Team Travel Overview', teamTableHeaderDesc:'All 48 teams sorted by estimated travel fatigue. Click any row for detailed breakdown.',
+    teamSearchPlaceholder:'Search teams...', teamSortFatigue:'Highest Fatigue', teamSortFatigueAsc:'Lowest Fatigue', teamSortDistance:'Most Distance',
+    teamSortGroup:'By Group', teamFilterAll:'All Groups',
+    teamColTeam:'Team', teamColGroup:'Group', teamColFatigue:'Fatigue', teamColDistance:'Distance', teamColRoute:'Route',
+    teamColElevation:'Max Elevation', teamColRest:'Avg Rest', teamColTZ:'Timezone',
+    teamDetailTitle:'Travel Profile',
+    teamFatigueBreakdown:'Fatigue Breakdown', teamRouteTitle:'Match Route',
+    teamFatigueDistance:'Travel Distance', teamFatigueElevation:'Elevation', teamFatigueTimezone:'Timezone', teamFatigueRest:'Rest',
+    teamWeight:'Weight', teamDistanceFromPrev:'from previous', teamRestDays:'rest days',
+    matchScheduleTitle:'Match Schedule', matchScheduleDesc:'Official FIFA World Cup 2026 match schedule. Data sourced from worldcup26.ir open API.',
+    matchSearchPlaceholder:'Search by team or city...', matchFilterAll:'All Matches', matchFilterGroup:'Group Stage', matchFilterKo:'Knockout',
+    matchColDate:'Date', matchColTime:'Time', matchColHome:'Home', matchColAway:'Away', matchColVenue:'Venue', matchColStage:'Stage',
+    matchStatusUpcoming:'Upcoming', matchStatusLive:'LIVE', matchStatusFinished:'Finished', matchNoResults:'No matches found',
+    matchLoadingMatches:'Loading match data...', matchApiError:'Failed to load matches', matchNoData:'Schedule not yet published',
+    venueCityTitle:'Host Cities', venueCityDesc:'16 host cities across 3 countries.',
+    venueStadiumTitle:'Stadiums', venueCountryFilter:'Country', venueCountryAll:'All Countries',
+    venueCapacity:'Capacity', venueElevation:'Elevation', venueClimate:'June-July Climate',
+    venueTemp:'Temperature', venueHumidity:'Humidity', venueRain:'Rain Probability', venueOpened:'Opened',
+    venueFunFact:'Did You Know?', venueMatchesHosted:'Matches Hosted',
+    venueCityOverview:'City Overview', venueMatchSchedule:'Match Schedule at this Venue',
+    compareTitle:'Team Comparison', compareSelect:'Select a team...', compareVs:'vs',
+    fatigue_low:'Low', fatigue_moderate:'Moderate', fatigue_high:'High', fatigue_severe:'Severe',
+    langSwitch:'中文', langLabel:'Language',
+    seoDescription:'Track all 48 teams\' travel distances, fatigue scores, match schedules, and explore 16 host cities and stadiums for the 2026 FIFA World Cup.',
+    errApiFailed:'Failed to load match data. Please try again later.', errApiTimeout:'Request timed out.', errApiCors:'Cannot reach API from local file. Please start the server with: <code>node server.js</code> and open <code>http://localhost:3000</code>.',
+    errNoData:'No data available.', errNoMatchData:'No match data available yet.',
+    footerCredit:'Data from World Cup 2026 open API', footerDisclaimer:'For informational purposes only. Not affiliated with FIFA.',
+    backToTeams:'Back to Teams', backToVenues:'Back to Venues', viewAll:'View All →',
+    totalDistance:'Total Distance', totalDistanceUnit:'km', avgFatigueUnit:'/10',
+    matchUpcomingDesc:'Match schedule will be available once the official draw is complete.',
+    noVenuesFound:'No venues match your filter.', retryAction:'Try Again',
+    dashMostFatigued:'Most Fatigued', dashLeastFatigued:'Least Fatigued',
+    teamDetailNotAvailable:'Team travel data is not yet available. Check back after the official match schedule is released.',
+    venueStadiumsInCity:'Stadiums in this City',
+    matchDetailTitle:'Match Details', matchDetailVenueInfo:'Stadium & Venue', matchDetailClimate:'Matchday Climate',
+    matchDetailKickoff:'Kickoff Time', matchDetailStage:'Stage', matchDetailGroup:'Group',
+    matchDetailCapacity:'Capacity', matchDetailElevation:'Elevation', matchDetailViewVenue:'View Stadium →',
+    matchDetailViewTeam:'Team Profile →', matchDetailClick:'Click row for details →',
+  },
+  zh: {
+    siteTitle:'2026世界杯旅行追踪', siteSubtitle:'球队疲劳度 & 赛程',
+    loading:'加载中...', error:'出了点问题', retry:'重试',
+    navDashboard:'控制台', navTeams:'球队行程', navMatches:'比赛赛程', navVenues:'城市 & 球场',
+    dashFatigueRank:'疲劳排行榜', dashFatigueRankDesc:'哪些球队的旅行安排最艰苦？基于飞行距离、海拔变化、时区跨越和休息间隔综合评估。',
+    dashTopFatigue:'最疲劳球队', dashComfortable:'最舒适球队', dashUpcoming:'即将开始',
+    dashKeyStats:'关键数据', dashTotalDistance:'累计里程', dashAvgFatigue:'平均疲劳',
+    dashTeamsTracked:'追踪球队', dashHostCities:'举办城市',
+    teamTableHeader:'球队行程总览', teamTableHeaderDesc:'所有48支球队按估算疲劳度排序。点击任意行查看详细分析。',
+    teamSearchPlaceholder:'搜索球队...', teamSortFatigue:'按疲劳度↓', teamSortFatigueAsc:'按疲劳度↑', teamSortDistance:'按里程↓',
+    teamSortGroup:'按小组', teamFilterAll:'全部小组',
+    teamColTeam:'球队', teamColGroup:'小组', teamColFatigue:'疲劳度', teamColDistance:'总里程', teamColRoute:'路线',
+    teamColElevation:'最高海拔', teamColRest:'平均休息', teamColTZ:'时区',
+    teamDetailTitle:'旅行档案',
+    teamFatigueBreakdown:'疲劳度分析', teamRouteTitle:'比赛路线',
+    teamFatigueDistance:'飞行距离', teamFatigueElevation:'海拔变化', teamFatigueTimezone:'时区跨越', teamFatigueRest:'休息间隔',
+    teamWeight:'权重', teamDistanceFromPrev:'距上一站', teamRestDays:'休息天数',
+    matchScheduleTitle:'比赛赛程', matchScheduleDesc:'2026世界杯官方赛程。数据来源：worldcup26.ir 开源API。',
+    matchSearchPlaceholder:'按球队或城市搜索...', matchFilterAll:'全部比赛', matchFilterGroup:'小组赛', matchFilterKo:'淘汰赛',
+    matchColDate:'日期', matchColTime:'时间', matchColHome:'主队', matchColAway:'客队', matchColVenue:'场地', matchColStage:'阶段',
+    matchStatusUpcoming:'未开始', matchStatusLive:'进行中', matchStatusFinished:'已结束', matchNoResults:'没有找到比赛',
+    matchLoadingMatches:'加载比赛数据...', matchApiError:'比赛数据加载失败', matchNoData:'赛程尚未发布',
+    matchDetailTitle:'比赛详情', matchDetailVenueInfo:'球场信息', matchDetailClimate:'比赛日气候',
+    matchDetailKickoff:'开球时间', matchDetailStage:'阶段', matchDetailGroup:'小组',
+    matchDetailCapacity:'容量', matchDetailElevation:'海拔', matchDetailViewVenue:'查看球场 →',
+    matchDetailViewTeam:'球队档案 →', matchDetailClick:'点击行查看详情 →',
+    venueCityTitle:'举办城市', venueCityDesc:'跨越三国的16座主办城市。',
+    venueStadiumTitle:'比赛场馆', venueCountryFilter:'国家筛选', venueCountryAll:'全部国家',
+    venueCapacity:'容量', venueElevation:'海拔', venueClimate:'6-7月气候',
+    venueTemp:'气温', venueHumidity:'湿度', venueRain:'降雨概率', venueOpened:'建成',
+    venueFunFact:'你知道吗？', venueMatchesHosted:'承办场次',
+    venueCityOverview:'城市概况', venueMatchSchedule:'该场馆比赛安排',
+    compareTitle:'球队对比', compareSelect:'选择球队...', compareVs:'对比',
+    fatigue_low:'轻松', fatigue_moderate:'适中', fatigue_high:'较高', fatigue_severe:'严重',
+    langSwitch:'English', langLabel:'语言',
+    seoDescription:'追踪2026世界杯48支球队的旅行距离、疲劳指数、比赛赛程，探索16座举办城市和球场。中英双语。',
+    errApiFailed:'比赛数据加载失败，请稍后重试。', errApiTimeout:'请求超时，请检查网络连接。', errApiCors:'本地文件无法调用 API（CORS 限制）。请启动服务器：<code>node server.js</code> 然后打开 <code>http://localhost:3000</code>。',
+    errNoData:'暂无数据。', errNoMatchData:'暂无比赛数据。',
+    footerCredit:'数据来源：World Cup 2026 开源 API', footerDisclaimer:'仅供参考，非FIFA官方产品。',
+    backToTeams:'返回球队列表', backToVenues:'返回城市列表', viewAll:'查看全部 →',
+    totalDistance:'累计里程', totalDistanceUnit:'公里', avgFatigueUnit:'分',
+    matchUpcomingDesc:'官方抽签完成后将公布完整赛程。',
+    noVenuesFound:'没有匹配的场馆。', retryAction:'重试',
+    dashMostFatigued:'最疲劳', dashLeastFatigued:'最轻松',
+    teamDetailNotAvailable:'球队行程数据暂不可用。请等待官方赛程发布后查看。',
+    venueStadiumsInCity:'该城市场馆',
+  }
+};
+
+/* ============================================================
+   SECTION 2: State Management
+   ============================================================ */
+const STATE = {
+  currentView: 'dashboard',
+  lang: (() => {
+    try { const p = new URLSearchParams(location.search); const l = p.get('lang'); if (l === 'zh' || l === 'en') return l; } catch (_) {}
+    try { const s = localStorage.getItem('wc26_lang'); if (s === 'zh' || s === 'en') return s; } catch (_) {}
+    return navigator.language.startsWith('zh') ? 'zh' : 'en';
+  })(),
+  matchesData: null,
+  matchesLoading: false,
+  matchesError: null,
+  apiTeamMap: null,     // API numeric ID → static team id
+  apiStadiumMap: null,  // API numeric stadium ID → static stadium objects
+  jwt: null,
+  jwtExpiry: 0,
+  sidebarOpen: false,
+  expandedMatchId: null,
+  __lastSearchTerm: '',
+  __lastStageFilter: 'all',
+  __lastGroupFilter: 'all',
+};
+
+function getLang() { return STATE.lang; }
+function t(key) { return I18N[STATE.lang]?.[key] ?? I18N.en[key] ?? key; }
+
+/* ============================================================
+   SECTION 3: i18n Engine
+   ============================================================ */
+function switchLang(lang) {
+  STATE.lang = lang;
+  try { localStorage.setItem('wc26_lang', lang); } catch (_) {}
+  try {
+    const url = new URL(location.href);
+    url.searchParams.set('lang', lang);
+    history.replaceState(null, '', url.toString());
+  } catch (_) {}
+  renderI18n();
+  renderSidebar();
+  refreshCurrentView();
+  updateMetaTags();
+}
+
+function renderI18n() {
+  // data-i18n text content
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (k) el.textContent = t(k);
+  });
+  // data-i18n-attr placeholder,title
+  document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+    const attrs = el.getAttribute('data-i18n-attr').split(/\s+/);
+    attrs.forEach(attr => {
+      const k = el.getAttribute('data-i18n');
+      if (k) el.setAttribute(attr, t(k));
+    });
+  });
+  // lang switcher button
+  const btn = document.getElementById('lang-switch-btn');
+  if (btn) btn.textContent = t('langSwitch');
+  // html lang
+  document.documentElement.lang = STATE.lang;
+}
+
+function updateMetaTags() {
+  const titleKey = STATE.lang === 'zh' ? '2026世界杯旅行追踪 — 球队疲劳度 & 赛程' : 'WC26 Travel Tracker — Team Fatigue & Match Schedule';
+  const descKey = t('seoDescription');
+  document.title = titleKey;
+  const metaDesc = document.getElementById('meta-description');
+  if (metaDesc) metaDesc.content = descKey;
+  const ogTitle = document.getElementById('og-title');
+  if (ogTitle) ogTitle.content = titleKey;
+  const ogDesc = document.getElementById('og-description');
+  if (ogDesc) ogDesc.content = descKey;
+  const twTitle = document.getElementById('twitter-title');
+  if (twTitle) twTitle.content = titleKey;
+  const twDesc = document.getElementById('twitter-description');
+  if (twDesc) twDesc.content = descKey;
+  const canonical = document.getElementById('link-canonical');
+  if (canonical) canonical.href = CONFIG.SITE_URL + '/?lang=' + STATE.lang;
+}
+
+function renderSidebar() {
+  const navItems = {
+    dashboard: t('navDashboard'),
+    teams: t('navTeams'),
+    matches: t('navMatches'),
+    venues: t('navVenues'),
+  };
+  document.querySelectorAll('.sidebar__nav-item').forEach(el => {
+    const view = el.getAttribute('data-nav');
+    const labelEl = el.querySelector('.sidebar__nav-label');
+    if (labelEl && navItems[view]) labelEl.textContent = navItems[view];
+    el.classList.toggle('sidebar__nav-item--active', view === STATE.currentView);
+  });
+  // Brand text
+  const brandText = document.getElementById('brand-text');
+  const brandSub = document.getElementById('brand-sub');
+  if (brandText) brandText.textContent = t('siteTitle');
+  if (brandSub) brandSub.textContent = t('siteSubtitle');
+  // Footer
+  const footerCredit = document.querySelector('[data-i18n="footerCredit"]');
+  const footerDisc = document.querySelector('[data-i18n="footerDisclaimer"]');
+  if (footerCredit) footerCredit.textContent = t('footerCredit');
+  if (footerDisc) footerDisc.textContent = t('footerDisclaimer');
+}
+
+/* ============================================================
+   SECTION 4: Navigation
+   ============================================================ */
+function navigateTo(viewName) {
+  STATE.currentView = viewName;
+  // Hide all views
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('view--active'));
+  // Show target
+  const target = document.getElementById('view-' + viewName);
+  if (target) target.classList.add('view--active');
+  // Update sidebar
+  renderSidebar();
+  // Render view content
+  refreshView(viewName);
+  // Scroll top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // On mobile, close sidebar
+  if (window.innerWidth < 768) closeSidebar();
+}
+
+function refreshCurrentView() {
+  refreshView(STATE.currentView);
+}
+
+function refreshView(viewName) {
+  switch (viewName) {
+    case 'dashboard': renderDashboard(); break;
+    case 'teams': renderTeamsView(); break;
+    case 'team-detail': break;
+    case 'matches': renderMatchesView(); break;
+    case 'venues': renderVenuesView(); break;
+    case 'venue-detail': break;
+  }
+}
+
+function navigateToTeamDetail(teamId) {
+  STATE.currentView = 'team-detail';
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('view--active'));
+  const target = document.getElementById('view-team-detail');
+  if (target) target.classList.add('view--active');
+  renderSidebar();
+  renderTeamDetail(teamId);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (window.innerWidth < 768) closeSidebar();
+}
+
+function navigateToVenueDetail(cityId) {
+  STATE.currentView = 'venue-detail';
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('view--active'));
+  const target = document.getElementById('view-venue-detail');
+  if (target) target.classList.add('view--active');
+  renderSidebar();
+  renderVenueDetail(cityId);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (window.innerWidth < 768) closeSidebar();
+}
+
+/* ============================================================
+   SECTION 5: Fatigue Algorithm
+   ============================================================ */
+function calcFatigueIndex(route) {
+  // route: array of {cityId, restDays}
+  // Weights: distance 40%, elevation 25%, timezone 20%, rest 15%
+  const W = { distance: 0.40, elevation: 0.25, timezone: 0.20, rest: 0.15 };
+  const MAX_DISTANCE_PER_LEG = 4500; // km (e.g. Vancouver → Miami)
+  const MAX_ELEVATION_DIFF = 2240;   // m
+  const MAX_TZ_DIFF = 3;             // hours
+  const MAX_REST_IMBALANCE = 5;      // days below ideal
+
+  if (!route || route.length < 2) return 1;
+
+  let totalDistScore = 0, totalElevScore = 0, totalTzScore = 0, totalRestScore = 0;
+  let legCount = 0;
+
+  for (let i = 1; i < route.length; i++) {
+    const prevCity = CITIES.find(c => c.id === route[i - 1].cityId);
+    const currCity = CITIES.find(c => c.id === route[i].cityId);
+    if (!prevCity || !currCity) continue;
+    legCount++;
+
+    // Distance score
+    const dist = haversineDistance(
+      prevCity.coordinates.lat, prevCity.coordinates.lng,
+      currCity.coordinates.lat, currCity.coordinates.lng
+    );
+    totalDistScore += Math.min(dist / MAX_DISTANCE_PER_LEG, 1);
+
+    // Elevation score
+    const elevDiff = Math.abs(currCity.elevation - prevCity.elevation);
+    totalElevScore += Math.min(elevDiff / MAX_ELEVATION_DIFF, 1);
+
+    // Timezone score
+    const tzDiff = Math.abs(currCity.timezoneOffset - prevCity.timezoneOffset);
+    totalTzScore += Math.min(tzDiff / MAX_TZ_DIFF, 1);
+
+    // Rest score
+    const rest = route[i].restDays || 3;
+    const idealRest = 4;
+    totalRestScore += Math.max(0, Math.min((idealRest - rest) / MAX_REST_IMBALANCE, 1));
+  }
+
+  if (legCount === 0) return 1;
+
+  const avgDist = totalDistScore / legCount;
+  const avgElev = totalElevScore / legCount;
+  const avgTz = totalTzScore / legCount;
+  const avgRest = totalRestScore / legCount;
+
+  const raw = (avgDist * W.distance + avgElev * W.elevation + avgTz * W.timezone + avgRest * W.rest) * 10;
+  return Math.round(Math.min(Math.max(raw, 1), 10));
+}
+
+function haversineDistance(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = toRad(lat2 - lat1);
+  const dLng = toRad(lng2 - lng1);
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function toRad(deg) { return deg * Math.PI / 180; }
+
+function getFatigueLabel(score) {
+  if (score <= 3) return { level: 'low', color: 'var(--fatigue-green)', text: getLang() === 'zh' ? '轻松' : 'Low' };
+  if (score <= 5) return { level: 'moderate', color: 'var(--fatigue-yellow)', text: getLang() === 'zh' ? '适中' : 'Moderate' };
+  if (score <= 7) return { level: 'high', color: 'var(--fatigue-orange)', text: getLang() === 'zh' ? '较高' : 'High' };
+  return { level: 'severe', color: 'var(--fatigue-red)', text: getLang() === 'zh' ? '严重' : 'Severe' };
+}
+
+/* ============================================================
+   SECTION 6: Route Generation (Data-Driven)
+   ============================================================ */
+function getTeamRouteFromMatches(teamId) {
+  // Build route from actual API match data (STATE.matchesData)
+  // Falls back to empty route if matches haven't loaded
+  var matches = STATE.matchesData;
+  if (!matches || matches.length === 0) return [];
+
+  // Find matches where this team plays (home or away), sorted by date
+  var teamMatches = matches.filter(function(m) {
+    return m.home_team === teamId || m.away_team === teamId;
+  }).sort(function(a, b) {
+    return (a.date || '').localeCompare(b.date || '');
+  });
+
+  if (teamMatches.length === 0) return [];
+
+  // Build route: for each match, record the city and date
+  var route = [];
+  for (var i = 0; i < teamMatches.length; i++) {
+    var m = teamMatches[i];
+    var cityId = m.city_id;
+    if (!cityId) {
+      // Fallback: try to find city from stadium
+      var stadiumObj = STADIUMS.find(function(s) { return s.id === m.stadium_id; });
+      if (stadiumObj) cityId = stadiumObj.cityId;
+    }
+    if (!cityId) continue; // skip matches without city info
+
+    // Calculate rest days since previous match
+    var restDays = 0;
+    if (i > 0) {
+      var prevDate = teamMatches[i - 1].date;
+      if (prevDate && m.date) {
+        var prev = new Date(prevDate + 'T00:00:00Z');
+        var curr = new Date(m.date + 'T00:00:00Z');
+        if (!isNaN(prev.getTime()) && !isNaN(curr.getTime())) {
+          restDays = Math.round((curr.getTime() - prev.getTime()) / 86400000);
+        }
+      }
+    }
+
+    route.push({
+      cityId: cityId,
+      date: m.date,
+      restDays: restDays,
+    });
+  }
+
+  return route;
+}
+
+function generateTeamRoute(team) {
+  // Backward-compatible wrapper: use real match data if available
+  var realRoute = getTeamRouteFromMatches(team.id);
+  if (realRoute.length > 0) return realRoute;
+
+  // Fallback: minimal route using team's group opening match city
+  // (This covers API-not-loaded scenarios; real routes take priority)
+  var fallbackCity = 'mexico_city';
+  return [{ cityId: fallbackCity, date: '2026-06-11', restDays: 0 }];
+}
+
+function getTeamFatigueData(team) {
+  const route = generateTeamRoute(team);
+  const fatigue = calcFatigueIndex(route);
+  const totalDist = route.reduce((sum, _, i) => {
+    if (i === 0) return 0;
+    const prev = CITIES.find(c => c.id === route[i - 1].cityId);
+    const curr = CITIES.find(c => c.id === route[i].cityId);
+    return sum + (prev && curr ? haversineDistance(prev.coordinates.lat, prev.coordinates.lng, curr.coordinates.lat, curr.coordinates.lng) : 0);
+  }, 0);
+  const maxElev = Math.max(...route.map(r => CITIES.find(c => c.id === r.cityId)?.elevation || 0));
+  const avgRest = route.slice(1).reduce((s, r) => s + (r.restDays || 0), 0) / Math.max(route.length - 1, 1);
+  return { team, fatigue, totalDist: Math.round(totalDist), maxElev, avgRest: Math.round(avgRest * 10) / 10, route };
+}
+
+/* ============================================================
+   SECTION 7: Dashboard View
+   ============================================================ */
+function renderDashboard() {
+  // Calculate fatigue for all teams
+  var realTeams = TEAMS;
+  const allFatigue = realTeams.map(t => getTeamFatigueData(t)).sort((a, b) => b.fatigue - a.fatigue);
+
+  // Key stats
+  const totalDist = allFatigue.reduce((s, t) => s + t.totalDist, 0);
+  const avgFatigue = Math.round(allFatigue.reduce((s, t) => s + t.fatigue, 0) / allFatigue.length * 10) / 10;
+
+  // Top 4 most fatigued
+  const top4 = allFatigue.slice(0, 4);
+  const bottom4 = allFatigue.slice(-4).reverse();
+
+  // Total distance stat
+  const totalDistEl = document.getElementById('stat-total-distance');
+  if (totalDistEl) {
+    totalDistEl.innerHTML = `${(totalDist / 1000).toFixed(1)}k <span class="stat-card__unit">${getLang() === 'zh' ? '公里' : 'km'}</span>`;
+  }
+
+  // Avg fatigue stat
+  const avgFatigueEl = document.getElementById('stat-avg-fatigue');
+  if (avgFatigueEl) {
+    avgFatigueEl.innerHTML = `${avgFatigue} <span class="stat-card__unit">/10</span>`;
+  }
+
+  // Teams tracked stat
+  const teamsTrackedEl = document.getElementById('stat-teams-tracked');
+  if (teamsTrackedEl) teamsTrackedEl.textContent = realTeams.length;
+
+  // Host cities stat
+  const hostCitiesEl = document.getElementById('stat-host-cities');
+  if (hostCitiesEl) hostCitiesEl.textContent = CITIES.length;
+
+  // Top fatigued list
+  const topListEl = document.getElementById('dash-top-fatigue');
+  if (topListEl) topListEl.innerHTML = renderDashboardTeamList(top4, 'top');
+
+  // Comfortable list
+  const comfListEl = document.getElementById('dash-comfortable');
+  if (comfListEl) comfListEl.innerHTML = renderDashboardTeamList(bottom4, 'bottom');
+
+  // Upcoming matches
+  renderDashboardUpcoming();
+}
+
+function renderDashboardTeamList(teams, type) {
+  return teams.map(td => {
+    const fl = getFatigueLabel(td.fatigue);
+    const name = getLang() === 'zh' ? td.team.nameZh : td.team.nameEn;
+    const distKm = type === 'top' ? `${td.totalDist} km` : `${td.totalDist} km`;
+    return `
+      <div class="card card--clickable" onclick="navigateToTeamDetail('${td.team.id}')" style="padding:var(--space-4);margin-bottom:var(--space-2);display:flex;align-items:center;justify-content:space-between;">
+        <div style="display:flex;align-items:center;gap:var(--space-3);">
+          <span style="font-size:1.25rem;">${td.team.flag}</span>
+          <div>
+            <div style="font-weight:600;font-size:var(--text-sm);">${name}</div>
+            <div style="font-size:var(--text-xs);color:var(--color-text-muted);">${getLang() === 'zh' ? '小组' : 'Group'} ${td.team.group} · ${distKm}</div>
+          </div>
+        </div>
+        <span style="font-weight:700;font-size:var(--text-base);color:${fl.color};">${td.fatigue}/10</span>
+      </div>`;
+  }).join('');
+}
+
+function renderDashboardUpcoming() {
+  const el = document.getElementById('dash-upcoming');
+  if (!el) return;
+  // Show some simulated upcoming matches or message
+  el.innerHTML = `
+    <div class="card" style="padding:var(--space-6);text-align:center;">
+      <div style="font-size:2rem;margin-bottom:var(--space-3);color:var(--color-brand-light);">⚽</div>
+      <div style="font-weight:600;margin-bottom:var(--space-2);">${getLang() === 'zh' ? '世界杯即将来临' : 'World Cup Is Coming'}</div>
+      <div style="font-size:var(--text-sm);color:var(--color-text-muted);">${t('matchUpcomingDesc')}</div>
+    </div>`;
+}
+
+/* ============================================================
+   SECTION 8: Teams View
+   ============================================================ */
+function renderTeamsView() {
+  const searchTerm = (document.getElementById('teams-search')?.value || '').toLowerCase().trim();
+  const sortBy = document.getElementById('teams-sort')?.value || 'fatigue-desc';
+  const groupFilter = document.getElementById('teams-group-filter')?.value || 'all';
+
+  // Calculate fatigue data for all teams
+  let data = TEAMS.map(t => getTeamFatigueData(t));
+
+  // Filter by group
+  if (groupFilter !== 'all') {
+    data = data.filter(d => d.team.group === groupFilter);
+  }
+
+  // Filter by search
+  if (searchTerm) {
+    data = data.filter(d =>
+      d.team.nameEn.toLowerCase().includes(searchTerm) ||
+      d.team.nameZh.includes(searchTerm) ||
+      d.team.group.toLowerCase().includes(searchTerm)
+    );
+  }
+
+  // Sort
+  switch (sortBy) {
+    case 'fatigue-desc': data.sort((a, b) => b.fatigue - a.fatigue); break;
+    case 'fatigue-asc': data.sort((a, b) => a.fatigue - b.fatigue); break;
+    case 'distance-desc': data.sort((a, b) => b.totalDist - a.totalDist); break;
+    case 'group-asc': data.sort((a, b) => a.team.group.localeCompare(b.team.group) || a.team.nameEn.localeCompare(b.team.nameEn)); break;
+  }
+
+  // Populate group filter
+  const groupSelect = document.getElementById('teams-group-filter');
+  if (groupSelect && groupSelect.options.length <= 1) {
+    const groups = [...new Set(TEAMS.map(t => t.group))].sort();
+    groups.forEach(g => {
+      const opt = document.createElement('option');
+      opt.value = g;
+      opt.textContent = `${getLang() === 'zh' ? '小组' : 'Group'} ${g}`;
+      groupSelect.appendChild(opt);
+    });
+  }
+
+  // Render table
+  renderTeamsTable(data);
+
+  // Render mobile cards
+  renderTeamsMobileCards(data);
+}
+
+function renderTeamsTable(data) {
+  const tbody = document.getElementById('teams-tbody');
+  if (!tbody) return;
+
+  if (data.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:var(--space-8);color:var(--color-text-muted);">${getLang() === 'zh' ? '没有匹配的球队' : 'No teams match your filter.'}</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = data.map(d => {
+    const fl = getFatigueLabel(d.fatigue);
+    const name = getLang() === 'zh' ? d.team.nameZh : d.team.nameEn;
+    const routeCities = d.route.map(r => {
+      const city = CITIES.find(c => c.id === r.cityId);
+      return city ? (getLang() === 'zh' ? city.name.zh : city.name.en) : r.cityId;
+    });
+    const routeStr = routeCities.join(' → ');
+    return `
+      <tr class="data-table__row--clickable" onclick="navigateToTeamDetail('${d.team.id}')">
+        <td>
+          <div style="display:flex;align-items:center;gap:var(--space-2);">
+            <span>${d.team.flag}</span>
+            <span style="font-weight:600;">${name}</span>
+          </div>
+        </td>
+        <td><span class="badge">${getLang() === 'zh' ? '组' : 'G'} ${d.team.group}</span></td>
+        <td><span class="fatigue-badge" style="background:${fl.color}20;color:${fl.color};border:1px solid ${fl.color}40;padding:2px 10px;border-radius:999px;font-weight:600;font-size:var(--text-sm);">${d.fatigue}/10</span></td>
+        <td>${d.totalDist.toLocaleString()} km</td>
+        <td class="col-route"><div class="route-thumbnail" title="${routeStr}">${routeCities.map((c, i) => `<span class="route-thumbnail__city">${c}</span>${i < routeCities.length - 1 ? '<span class="route-thumbnail__arrow">→</span>' : ''}`).join('')}</div></td>
+        <td class="col-tz">${d.maxElev.toLocaleString()} m</td>
+        <td>${d.avgRest} ${getLang() === 'zh' ? '天' : 'd'}</td>
+      </tr>`;
+  }).join('');
+}
+
+function renderTeamsMobileCards(data) {
+  const container = document.getElementById('teams-cards');
+  if (!container) return;
+
+  if (window.innerWidth > 768) {
+    container.classList.add('u-hidden');
+    return;
+  }
+  container.classList.remove('u-hidden');
+
+  if (data.length === 0) {
+    container.innerHTML = `<div class="state-container"><div class="state-container__icon">🔍</div><div class="state-container__title">${getLang() === 'zh' ? '没有匹配的球队' : 'No teams found'}</div></div>`;
+    return;
+  }
+
+  container.innerHTML = data.map(d => {
+    const fl = getFatigueLabel(d.fatigue);
+    const name = getLang() === 'zh' ? d.team.nameZh : d.team.nameEn;
+    return `
+      <div class="card card--clickable" onclick="navigateToTeamDetail('${d.team.id}')" style="padding:var(--space-5);margin-bottom:var(--space-3);">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);">
+          <div style="display:flex;align-items:center;gap:var(--space-3);">
+            <span style="font-size:1.5rem;">${d.team.flag}</span>
+            <div>
+              <div style="font-weight:700;">${name}</div>
+              <div style="font-size:var(--text-xs);color:var(--color-text-muted);">${getLang() === 'zh' ? '小组' : 'Group'} ${d.team.group}</div>
+            </div>
+          </div>
+          <span style="font-weight:800;font-size:var(--text-lg);color:${fl.color};">${d.fatigue}/10</span>
+        </div>
+        <div style="display:flex;gap:var(--space-6);font-size:var(--text-xs);color:var(--color-text-secondary);">
+          <span>${d.totalDist.toLocaleString()} km</span>
+          <span>${d.maxElev.toLocaleString()} m</span>
+          <span>${d.avgRest} ${getLang() === 'zh' ? '天休息' : 'd rest'}</span>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+/* ============================================================
+   SECTION 9: Team Detail View
+   ============================================================ */
+function renderTeamDetail(teamId) {
+  // Validate team exists
+  if (!teamId) return;
+
+  const team = TEAMS.find(t => t.id === teamId);
+  if (!team) return;
+
+  const data = getTeamFatigueData(team);
+  const fl = getFatigueLabel(data.fatigue);
+  const name = getLang() === 'zh' ? team.nameZh : team.nameEn;
+
+  // Title
+  const titleEl = document.getElementById('team-detail-title');
+  if (titleEl) titleEl.innerHTML = `${team.flag} ${name} — <span style="color:${fl.color}">${data.fatigue}/10</span>`;
+
+  // Stats cards
+  const statsEl = document.getElementById('team-detail-stats');
+  if (statsEl) {
+    statsEl.innerHTML = `
+      <div class="stat-card">
+        <span class="stat-card__label">${getLang() === 'zh' ? '疲劳度' : 'Fatigue'}</span>
+        <span class="stat-card__value" style="color:${fl.color}">${data.fatigue}<span class="stat-card__unit">/10</span></span>
+        <span class="stat-card__unit">${fl.text}</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__label">${getLang() === 'zh' ? '总飞行距离' : 'Total Distance'}</span>
+        <span class="stat-card__value">${data.totalDist.toLocaleString()}</span>
+        <span class="stat-card__unit">km</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__label">${getLang() === 'zh' ? '最高海拔' : 'Max Elevation'}</span>
+        <span class="stat-card__value">${data.maxElev.toLocaleString()}</span>
+        <span class="stat-card__unit">m</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__label">${getLang() === 'zh' ? '平均休息' : 'Avg Rest'}</span>
+        <span class="stat-card__value">${data.avgRest}</span>
+        <span class="stat-card__unit">${getLang() === 'zh' ? '天' : 'days'}</span>
+      </div>`;
+  }
+
+  // Fatigue breakdown
+  renderFatigueBreakdown(data, team);
+
+  // Journey timeline
+  renderJourneyTimeline(data, team);
+}
+
+function renderFatigueBreakdown(data, team) {
+  const el = document.getElementById('team-fatigue-breakdown');
+  if (!el) return;
+
+  const route = data.route;
+  let distScore = 0, elevScore = 0, tzScore = 0, restScore = 0;
+  let legCount = 0;
+
+  for (let i = 1; i < route.length; i++) {
+    const prev = CITIES.find(c => c.id === route[i - 1].cityId);
+    const curr = CITIES.find(c => c.id === route[i].cityId);
+    if (!prev || !curr) continue;
+    legCount++;
+    distScore += haversineDistance(prev.coordinates.lat, prev.coordinates.lng, curr.coordinates.lat, curr.coordinates.lng);
+    elevScore += Math.abs(curr.elevation - prev.elevation);
+    tzScore += Math.abs(curr.timezoneOffset - prev.timezoneOffset);
+    restScore += route[i].restDays || 3;
+  }
+
+  if (legCount === 0) legCount = 1;
+  distScore = Math.round(distScore);
+  elevScore = Math.round(elevScore / legCount);
+  tzScore = Math.round(tzScore * 10) / 10;
+  restScore = Math.round(restScore / legCount * 10) / 10;
+
+  el.innerHTML = `
+    <div class="fatigue-breakdown__item">
+      <div class="fatigue-breakdown__label">${t('teamFatigueDistance')}</div>
+      <div class="fatigue-breakdown__value">${distScore.toLocaleString()}</div>
+      <div class="fatigue-breakdown__weight">${getLang() === 'zh' ? '总公里数' : 'Total km'} · ${getLang() === 'zh' ? '权重' : 'Weight'} 40%</div>
+    </div>
+    <div class="fatigue-breakdown__item">
+      <div class="fatigue-breakdown__label">${t('teamFatigueElevation')}</div>
+      <div class="fatigue-breakdown__value">${elevScore.toLocaleString()}</div>
+      <div class="fatigue-breakdown__weight">${getLang() === 'zh' ? '平均海拔差(m)' : 'Avg elev diff (m)'} · ${getLang() === 'zh' ? '权重' : 'Weight'} 25%</div>
+    </div>
+    <div class="fatigue-breakdown__item">
+      <div class="fatigue-breakdown__label">${t('teamFatigueTimezone')}</div>
+      <div class="fatigue-breakdown__value">${tzScore}</div>
+      <div class="fatigue-breakdown__weight">${getLang() === 'zh' ? '总时区跨越(h)' : 'Total TZ shift (h)'} · ${getLang() === 'zh' ? '权重' : 'Weight'} 20%</div>
+    </div>
+    <div class="fatigue-breakdown__item">
+      <div class="fatigue-breakdown__label">${t('teamFatigueRest')}</div>
+      <div class="fatigue-breakdown__value">${restScore}</div>
+      <div class="fatigue-breakdown__weight">${getLang() === 'zh' ? '平均休息(天)' : 'Avg rest (d)'} · ${getLang() === 'zh' ? '权重' : 'Weight'} 15%</div>
+    </div>`;
+}
+
+function renderJourneyTimeline(data, team) {
+  const el = document.getElementById('team-journey');
+  if (!el) return;
+
+  el.innerHTML = data.route.map((stop, i) => {
+    const city = CITIES.find(c => c.id === stop.cityId);
+    if (!city) return '';
+    const cityName = getLang() === 'zh' ? city.name.zh : city.name.en;
+    const countryName = getLang() === 'zh' ? city.country.zh : city.country.en;
+    let meta = '';
+    if (i > 0) {
+      const prevCity = CITIES.find(c => c.id === data.route[i - 1].cityId);
+      if (prevCity) {
+        const dist = Math.round(haversineDistance(prevCity.coordinates.lat, prevCity.coordinates.lng, city.coordinates.lat, city.coordinates.lng));
+        meta = `${dist.toLocaleString()} km ${t('teamDistanceFromPrev')} · ${stop.restDays || 3} ${t('teamRestDays')}`;
+      }
+    }
+    return `
+      <div class="journey-timeline__node">
+        <div class="journey-timeline__dot"></div>
+        <div class="journey-timeline__date">${getLang() === 'zh' ? '比赛' : 'Match'} ${i + 1} · ${stop.date}</div>
+        <div class="journey-timeline__city">${cityName}, ${countryName}</div>
+        ${meta ? `<div class="journey-timeline__meta">${meta}</div>` : ''}
+        <div style="margin-top:var(--space-2);">
+          <span class="badge" style="font-size:var(--text-xs);">${city.elevation.toLocaleString()}m · UTC${city.timezoneOffset >= 0 ? '+' : ''}${city.timezoneOffset}</span>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+/* ============================================================
+   SECTION 10: Matches View (API Integration)
+   ============================================================ */
+let _debounceTimer = null;
+function debouncedRenderMatches() {
+  clearTimeout(_debounceTimer);
+  _debounceTimer = setTimeout(renderMatchesView, CONFIG.SEARCH_DEBOUNCE);
+}
+
+async function renderMatchesView() {
+  const contentEl = document.getElementById('matches-content');
+  if (!contentEl) return;
+
+  const searchTerm = (document.getElementById('matches-search')?.value || '').toLowerCase().trim();
+  const stageFilter = document.getElementById('matches-stage')?.value || 'all';
+
+  // Populate group filter
+  const groupSelect = document.getElementById('matches-group');
+  if (groupSelect && groupSelect.options.length <= 1) {
+    const groups = [...new Set(TEAMS.map(t => t.group))].sort();
+    groups.forEach(g => {
+      const opt = document.createElement('option');
+      opt.value = g;
+      opt.textContent = `${getLang() === 'zh' ? '小组' : 'Group'} ${g}`;
+      groupSelect.appendChild(opt);
+    });
+  }
+  const groupFilter = document.getElementById('matches-group')?.value || 'all';
+
+  // Show loading
+  if (!STATE.matchesData && !STATE.matchesLoading) {
+    contentEl.innerHTML = renderLoadingState(t('matchLoadingMatches'));
+  }
+
+  // Fetch data
+  if (!STATE.matchesData && !STATE.matchesError) {
+    fetchMatches();
+  }
+
+  // Error state
+  if (STATE.matchesError) {
+    contentEl.innerHTML = renderErrorState(STATE.matchesError, () => { STATE.matchesError = null; STATE.matchesData = null; renderMatchesView(); });
+    return;
+  }
+
+  // Loading state
+  if (STATE.matchesLoading || !STATE.matchesData) {
+    contentEl.innerHTML = renderLoadingState(t('matchLoadingMatches'));
+    return;
+  }
+
+  // No data
+  if (!STATE.matchesData.length) {
+    contentEl.innerHTML = renderEmptyState('📅', t('matchNoData'), t('matchUpcomingDesc'));
+    return;
+  }
+
+  // Filter & render
+  let matches = STATE.matchesData;
+
+  if (stageFilter === 'group') matches = matches.filter(m => m.stage === 'group');
+  else if (stageFilter === 'ko') matches = matches.filter(m => m.stage !== 'group');
+
+  if (groupFilter !== 'all') {
+    matches = matches.filter(m => {
+      const homeTeam = TEAMS.find(t => t.id === m.home_team);
+      const awayTeam = TEAMS.find(t => t.id === m.away_team);
+      return (homeTeam?.group === groupFilter) || (awayTeam?.group === groupFilter);
+    });
+  }
+
+  if (searchTerm) {
+    matches = matches.filter(m => {
+      const homeTeam = TEAMS.find(t => t.id === m.home_team);
+      const awayTeam = TEAMS.find(t => t.id === m.away_team);
+      const venue = CITIES.find(c => c.id === m.city_id) || STADIUMS.find(s => s.id === m.stadium_id);
+      const homeName = homeTeam ? (getLang() === 'zh' ? homeTeam.nameZh : homeTeam.nameEn).toLowerCase() : '';
+      const awayName = awayTeam ? (getLang() === 'zh' ? awayTeam.nameZh : awayTeam.nameEn).toLowerCase() : '';
+      const venueName = venue ? (getLang() === 'zh' ? (venue.name?.zh || venue.nameEn) : (venue.name?.en || venue.nameEn)).toLowerCase() : '';
+      return homeName.includes(searchTerm) || awayName.includes(searchTerm) || venueName.includes(searchTerm);
+    });
+  }
+
+  // Sort by date (ascending), then by time
+  matches.sort(function(a, b) {
+    var dateA = a.date || '';
+    var dateB = b.date || '';
+    if (dateA !== dateB) return dateA.localeCompare(dateB);
+    var timeA = a.time || '00:00';
+    var timeB = b.time || '00:00';
+    return timeA.localeCompare(timeB);
+  });
+
+  if (matches.length === 0) {
+    contentEl.innerHTML = renderEmptyState('🔍', t('matchNoResults'), '');
+    return;
+  }
+
+  STATE.expandedMatchId = null;
+  renderMatchesTable(matches);
+}
+
+let _matchHintShown = false;
+
+function renderMatchesTable(matches) {
+  const contentEl = document.getElementById('matches-content');
+  if (!contentEl) return;
+
+  if (!_matchHintShown) { _matchHintShown = true; }
+
+  // Build a unique match ID based on team IDs + date
+  const getMatchId = (m, i) => `${m.home_team || 'h'}__${m.away_team || 'a'}__${m.date || ''}`;
+
+  contentEl.innerHTML = `
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>${t('matchColDate')}</th>
+          <th>${t('matchColTime')}</th>
+          <th>${t('matchColHome')}</th>
+          <th></th>
+          <th>${t('matchColAway')}</th>
+          <th>${t('matchColVenue')}</th>
+          <th>${t('matchColStage')}</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${matches.map((m, idx) => {
+          const matchId = getMatchId(m, idx);
+          const homeTeam = TEAMS.find(t => t.id === m.home_team);
+          const awayTeam = TEAMS.find(t => t.id === m.away_team);
+          const venue = STADIUMS.find(s => s.id === m.stadium_id) || CITIES.find(c => c.id === m.city_id);
+          const homeName = homeTeam ? (getLang() === 'zh' ? homeTeam.nameZh : homeTeam.nameEn) : (m.home_team || 'TBD');
+          const awayName = awayTeam ? (getLang() === 'zh' ? awayTeam.nameZh : awayTeam.nameEn) : (m.away_team || 'TBD');
+          const homeFlag = homeTeam ? homeTeam.flag : '🏳️';
+          const awayFlag = awayTeam ? awayTeam.flag : '🏳️';
+          const venueName = venue ? (getLang() === 'zh' ? venue.name.zh : venue.name.en) : (m.stadium_name || 'TBD');
+          const stageLabel = m.stage === 'group' ? (getLang() === 'zh' ? '小组赛' : 'Group') : (getLang() === 'zh' ? '淘汰赛' : 'Knockout');
+          const statusClass = m.status === 'live' ? 'match-status--live' : m.status === 'finished' ? 'match-status--finished' : '';
+          const scoreDisplay = m.status === 'finished' || m.status === 'live'
+            ? `${m.home_score ?? '-'} - ${m.away_score ?? '-'}`
+            : `${t('matchStatusUpcoming')}`;
+          const isExpanded = STATE.expandedMatchId === matchId;
+          const rowClass = isExpanded ? 'match-row--clickable match-row--expanded' : 'match-row--clickable';
+          return `
+            <tr class="${rowClass}" onclick="toggleMatchDetail(event, '${matchId}', ${idx})">
+              <td>${m.date || 'TBD'}</td>
+              <td>${m.time || 'TBD'}</td>
+              <td style="text-align:right;font-weight:600;">${homeFlag} ${homeName}</td>
+              <td style="text-align:center;"><span class="badge ${statusClass}" style="min-width:50px;text-align:center;">${scoreDisplay}</span></td>
+              <td style="font-weight:600;">${awayFlag} ${awayName}</td>
+              <td style="font-size:var(--text-xs);color:var(--color-text-secondary);">${venueName}</td>
+              <td><span class="badge">${stageLabel}</span></td>
+            </tr>
+            ${isExpanded ? `
+            <tr class="match-detail-row match-detail-row--open" id="match-detail-${matchId}">
+              <td colspan="7" style="padding:0;">
+                ${renderMatchDetailPanel(m, homeTeam, awayTeam, venue, matchId)}
+              </td>
+            </tr>` : ''}`;
+        }).join('')}
+      </tbody>
+    </table>
+    <div class="match-table-hint">${t('matchDetailClick')}</div>`;
+}
+
+function toggleMatchDetail(event, matchId, index) {
+  // Don't expand if clicked on a nav link inside the detail panel
+  if (event.target.closest('.match-detail-panel__nav-btn') || event.target.closest('.match-detail-row')) return;
+
+  if (STATE.expandedMatchId === matchId) {
+    STATE.expandedMatchId = null;
+  } else {
+    STATE.expandedMatchId = matchId;
+  }
+
+  // Re-render the whole table (simple approach for a single-page app)
+  const contentEl = document.getElementById('matches-content');
+  if (!contentEl) return;
+
+  // Get current filters
+  const stageFilter = document.getElementById('matches-stage')?.value || 'all';
+  const groupFilter = document.getElementById('matches-group')?.value || 'all';
+  const searchTerm = (document.getElementById('matches-search')?.value || '').toLowerCase().trim();
+
+  let matches = STATE.matchesData || [];
+  if (stageFilter === 'group') matches = matches.filter(m => m.stage === 'group');
+  else if (stageFilter === 'ko') matches = matches.filter(m => m.stage !== 'group');
+  if (groupFilter !== 'all') {
+    matches = matches.filter(m => {
+      const ht = TEAMS.find(t => t.id === m.home_team);
+      const at = TEAMS.find(t => t.id === m.away_team);
+      return (ht?.group === groupFilter) || (at?.group === groupFilter);
+    });
+  }
+  if (searchTerm) {
+    matches = matches.filter(m => {
+      const ht = TEAMS.find(t => t.id === m.home_team);
+      const at = TEAMS.find(t => t.id === m.away_team);
+      const v = CITIES.find(c => c.id === m.city_id) || STADIUMS.find(s => s.id === m.stadium_id);
+      const hn = ht ? (getLang() === 'zh' ? ht.nameZh : ht.nameEn).toLowerCase() : '';
+      const an = at ? (getLang() === 'zh' ? at.nameZh : at.nameEn).toLowerCase() : '';
+      const vn = v ? (getLang() === 'zh' ? (v.name?.zh || v.nameEn) : (v.name?.en || v.nameEn)).toLowerCase() : '';
+      return hn.includes(searchTerm) || an.includes(searchTerm) || vn.includes(searchTerm);
+    });
+  }
+
+  renderMatchesTable(matches);
+}
+
+function renderMatchDetailPanel(match, homeTeam, awayTeam, venue, matchId) {
+  const city = CITIES.find(c => c.id === match.city_id);
+  const stadium = STADIUMS.find(s => s.cityId === (city?.id) || s.id === match.stadium_id);
+  const cityName = city ? (getLang() === 'zh' ? city.name.zh : city.name.en) : (venue ? (getLang() === 'zh' ? (venue.name?.zh || venue.nameEn) : (venue.name?.en || venue.nameEn)) : 'TBD');
+  const stadiumName = stadium ? (getLang() === 'zh' ? stadium.name.zh : stadium.name.en) : (venue ? (getLang() === 'zh' ? (venue.name?.zh || venue.nameEn) : (venue.name?.en || venue.nameEn)) : 'TBD');
+  const homeName = homeTeam ? (getLang() === 'zh' ? homeTeam.nameZh : homeTeam.nameEn) : (match.home_team || 'TBD');
+  const awayName = awayTeam ? (getLang() === 'zh' ? awayTeam.nameZh : awayTeam.nameEn) : (match.away_team || 'TBD');
+  const homeFlag = homeTeam ? homeTeam.flag : '🏳️';
+  const awayFlag = awayTeam ? awayTeam.flag : '🏳️';
+  const homeGroup = homeTeam?.group || '?';
+  const awayGroup = awayTeam?.group || '?';
+  const stageLabel = match.stage === 'group' ? (getLang() === 'zh' ? '小组赛' : 'Group Stage') : (getLang() === 'zh' ? '淘汰赛' : 'Knockout');
+  const capacityText = stadium ? (stadium.capacity / 1000).toFixed(1) + 'k' : 'N/A';
+  const elevationText = city ? city.elevation + 'm' : 'N/A';
+  const climateTemp = city ? (getLang() === 'zh'
+    ? `${city.climate.avgTempLow}°C ~ ${city.climate.avgTempHigh}°C`
+    : `${city.climate.avgTempLow}°F ~ ${city.climate.avgTempHigh}°F`) : 'N/A';
+  const humidityText = city ? city.climate.avgHumidity + '%' : 'N/A';
+  const rainText = city ? city.climate.rainProbability + '%' : 'N/A';
+  const timezoneText = city ? 'UTC' + (city.timezoneOffset >= 0 ? '+' : '') + city.timezoneOffset : 'N/A';
+  const cityId = city?.id || (venue?.id || '');
+  const homeTeamId = homeTeam?.id || match.home_team || '';
+  const awayTeamId = awayTeam?.id || match.away_team || '';
+
+  return `
+    <div class="match-detail-panel">
+      <!-- Team matchup -->
+      <div class="match-detail-panel__teams">
+        <div class="match-detail-panel__team">
+          <span class="match-detail-panel__team-flag">${homeFlag}</span>
+          <span class="match-detail-panel__team-name">${homeName}</span>
+          <span class="match-detail-panel__team-group">${t('matchDetailGroup')} ${homeGroup}</span>
+        </div>
+        <span class="match-detail-panel__vs">VS</span>
+        <div class="match-detail-panel__team">
+          <span class="match-detail-panel__team-flag">${awayFlag}</span>
+          <span class="match-detail-panel__team-name">${awayName}</span>
+          <span class="match-detail-panel__team-group">${t('matchDetailGroup')} ${awayGroup}</span>
+        </div>
+      </div>
+
+      <!-- Meta info chips -->
+      <div class="match-detail-panel__meta">
+        <div class="match-detail-panel__meta-item">
+          <span class="match-detail-panel__meta-icon">📅</span>
+          <span class="match-detail-panel__meta-label">${t('matchDetailKickoff')}</span>
+          <span class="match-detail-panel__meta-value">${match.date || 'TBD'} ${match.time || ''}</span>
+        </div>
+        <div class="match-detail-panel__meta-item">
+          <span class="match-detail-panel__meta-icon">🏟️</span>
+          <span class="match-detail-panel__meta-label">${t('matchDetailStage')}</span>
+          <span class="match-detail-panel__meta-value">${stageLabel}</span>
+        </div>
+        ${match.group ? `
+        <div class="match-detail-panel__meta-item">
+          <span class="match-detail-panel__meta-icon">🏷️</span>
+          <span class="match-detail-panel__meta-label">${t('matchDetailGroup')}</span>
+          <span class="match-detail-panel__meta-value">${match.group}</span>
+        </div>` : ''}
+        <div class="match-detail-panel__meta-item">
+          <span class="match-detail-panel__meta-icon">🕐</span>
+          <span class="match-detail-panel__meta-label">Timezone</span>
+          <span class="match-detail-panel__meta-value">${timezoneText}</span>
+        </div>
+      </div>
+
+      <!-- Two-column grid: Venue + Climate -->
+      <div class="match-detail-panel__cols">
+        <div class="match-detail-panel__section">
+          <div class="match-detail-panel__section-title">${t('matchDetailVenueInfo')}</div>
+          <div style="display:flex;flex-direction:column;gap:var(--space-2);">
+            <div style="display:flex;justify-content:space-between;font-size:var(--text-sm);">
+              <span style="color:var(--color-text-muted);">🏟️</span>
+              <span style="font-weight:600;color:var(--color-text-primary);">${stadiumName}</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:var(--text-sm);">
+              <span style="color:var(--color-text-muted);">📍</span>
+              <span style="color:var(--color-text-secondary);">${cityName}</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:var(--text-sm);">
+              <span style="color:var(--color-text-muted);">${t('matchDetailCapacity')}</span>
+              <span style="font-weight:600;color:var(--color-text-primary);">${capacityText}</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:var(--text-sm);">
+              <span style="color:var(--color-text-muted);">${t('matchDetailElevation')}</span>
+              <span style="font-weight:600;color:var(--color-text-primary);">${elevationText}</span>
+            </div>
+          </div>
+        </div>
+        <div class="match-detail-panel__section">
+          <div class="match-detail-panel__section-title">${t('matchDetailClimate')}</div>
+          <div style="display:flex;gap:var(--space-5);flex-wrap:wrap;">
+            <div style="display:flex;flex-direction:column;align-items:center;min-width:50px;">
+              <span style="font-size:1.2rem;">🌡️</span>
+              <span style="font-size:var(--text-xs);color:var(--color-text-muted);">${t('venueTemp')}</span>
+              <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-primary);">${climateTemp}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;min-width:50px;">
+              <span style="font-size:1.2rem;">💧</span>
+              <span style="font-size:var(--text-xs);color:var(--color-text-muted);">${t('venueHumidity')}</span>
+              <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-primary);">${humidityText}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;min-width:50px;">
+              <span style="font-size:1.2rem;">🌧️</span>
+              <span style="font-size:var(--text-xs);color:var(--color-text-muted);">${t('venueRain')}</span>
+              <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-primary);">${rainText}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cross-navigation -->
+      <div class="match-detail-panel__nav">
+        ${cityId ? `<button class="match-detail-panel__nav-btn match-detail-panel__nav-btn--venue" onclick="event.stopPropagation();navigateToVenueDetail('${cityId}')">🏟️ ${t('matchDetailViewVenue')}</button>` : ''}
+        ${homeTeamId ? `<button class="match-detail-panel__nav-btn match-detail-panel__nav-btn--venue" onclick="event.stopPropagation();navigateToTeamDetail('${homeTeamId}')">${homeFlag} ${homeName} ${t('matchDetailViewTeam')}</button>` : ''}
+        ${awayTeamId && awayTeamId !== homeTeamId ? `<button class="match-detail-panel__nav-btn match-detail-panel__nav-btn--venue" onclick="event.stopPropagation();navigateToTeamDetail('${awayTeamId}')">${awayFlag} ${awayName} ${t('matchDetailViewTeam')}</button>` : ''}
+      </div>
+    </div>`;
+}
+
+/* ============================================================
+   SECTION 11: Venues View
+   ============================================================ */
+let _currentCountryFilter = 'all';
+function filterVenues(country) {
+  _currentCountryFilter = country;
+  // Update country tabs
+  document.querySelectorAll('.country-tab').forEach(tab => {
+    tab.classList.toggle('country-tab--active', tab.getAttribute('data-country') === country);
+  });
+  renderVenuesView();
+}
+
+function renderVenuesView() {
+  const gridEl = document.getElementById('venues-grid');
+  if (!gridEl) return;
+
+  let cities = CITIES;
+  if (_currentCountryFilter !== 'all') {
+    cities = cities.filter(c => c.countryCode === _currentCountryFilter);
+  }
+
+  if (cities.length === 0) {
+    gridEl.innerHTML = renderEmptyState('🏟️', t('noVenuesFound'), '');
+    return;
+  }
+
+  gridEl.innerHTML = cities.map(city => {
+    const stadium = STADIUMS.find(s => s.cityId === city.id);
+    const cityName = getLang() === 'zh' ? city.name.zh : city.name.en;
+    const countryName = getLang() === 'zh' ? city.country.zh : city.country.en;
+    const flag = city.countryCode === 'US' ? '🇺🇸' : city.countryCode === 'MX' ? '🇲🇽' : '🇨🇦';
+    const climateTemp = getLang() === 'zh'
+      ? `${city.climate.avgTempLow}°C ~ ${city.climate.avgTempHigh}°C`
+      : `${city.climate.avgTempLow}°F ~ ${city.climate.avgTempHigh}°F`;
+    return `
+      <div class="card venue-card" onclick="navigateToVenueDetail('${city.id}')" style="padding:var(--space-5);">
+        <div class="venue-card__header">
+          <div>
+            <div class="venue-card__name">${stadium ? (getLang() === 'zh' ? stadium.name.zh : stadium.name.en) : cityName}</div>
+            <div class="venue-card__city">${flag} ${cityName}, ${countryName}</div>
+          </div>
+        </div>
+        <div class="venue-card__stats">
+          <div><span class="venue-card__stat-label">${t('venueCapacity')}</span> <span class="venue-card__stat-value">${stadium ? (stadium.capacity / 1000).toFixed(1) + 'k' : 'N/A'}</span></div>
+          <div><span class="venue-card__stat-label">${t('venueElevation')}</span> <span class="venue-card__stat-value">${city.elevation}m</span></div>
+          <div><span class="venue-card__stat-label">${t('venueTemp')}</span> <span class="venue-card__stat-value">${climateTemp}</span></div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+/* ============================================================
+   SECTION 12: Venue Detail View
+   ============================================================ */
+function renderVenueDetail(cityId) {
+  const city = CITIES.find(c => c.id === cityId);
+  if (!city) return;
+
+  const stadium = STADIUMS.find(s => s.cityId === cityId);
+  const cityName = getLang() === 'zh' ? city.name.zh : city.name.en;
+  const countryName = getLang() === 'zh' ? city.country.zh : city.country.en;
+  const flag = city.countryCode === 'US' ? '🇺🇸' : city.countryCode === 'MX' ? '🇲🇽' : '🇨🇦';
+
+  // Title
+  const titleEl = document.getElementById('venue-detail-title');
+  if (titleEl) titleEl.textContent = `${flag} ${cityName} — ${stadium ? (getLang() === 'zh' ? stadium.name.zh : stadium.name.en) : ''}`;
+
+  // Stats
+  const statsEl = document.getElementById('venue-detail-stats');
+  if (statsEl) {
+    statsEl.innerHTML = `
+      <div class="stat-card">
+        <span class="stat-card__label">${t('venueCapacity')}</span>
+        <span class="stat-card__value">${stadium ? (stadium.capacity / 1000).toFixed(1) + 'k' : 'N/A'}</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__label">${t('venueElevation')}</span>
+        <span class="stat-card__value">${city.elevation}</span>
+        <span class="stat-card__unit">m</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__label">${t('venueOpened')}</span>
+        <span class="stat-card__value">${stadium ? stadium.opened : 'N/A'}</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__label">${t('venueMatchesHosted')}</span>
+        <span class="stat-card__value">${city.hostedMatches}</span>
+        <span class="stat-card__unit">${getLang() === 'zh' ? '场' : 'matches'}</span>
+      </div>`;
+  }
+
+  // Climate
+  const climateEl = document.getElementById('venue-climate');
+  if (climateEl) {
+    climateEl.innerHTML = `
+      <div style="display:flex;gap:var(--space-8);padding:var(--space-6);flex-wrap:wrap;">
+        <div class="climate-widget">
+          <div class="climate-widget__icon">🌡️</div>
+          <div class="climate-widget__label">${t('venueTemp')}</div>
+          <div class="climate-widget__value">${city.climate.avgTempLow}° ~ ${city.climate.avgTempHigh}°</div>
+        </div>
+        <div class="climate-widget">
+          <div class="climate-widget__icon">💧</div>
+          <div class="climate-widget__label">${t('venueHumidity')}</div>
+          <div class="climate-widget__value">${city.climate.avgHumidity}%</div>
+        </div>
+        <div class="climate-widget">
+          <div class="climate-widget__icon">🌧️</div>
+          <div class="climate-widget__label">${t('venueRain')}</div>
+          <div class="climate-widget__value">${city.climate.rainProbability}%</div>
+        </div>
+        <div class="climate-widget">
+          <div class="climate-widget__icon">🕐</div>
+          <div class="climate-widget__label">Timezone</div>
+          <div class="climate-widget__value">UTC${city.timezoneOffset >= 0 ? '+' : ''}${city.timezoneOffset}</div>
+        </div>
+      </div>
+      <div style="padding:0 var(--space-6) var(--space-5);font-size:var(--text-sm);color:var(--color-text-secondary);line-height:1.6;">
+        ${getLang() === 'zh' ? city.description.zh : city.description.en}
+      </div>
+      ${stadium ? `
+      <div style="padding:0 var(--space-6) var(--space-5);border-top:1px solid var(--color-border-subtle);margin-top:var(--space-3);padding-top:var(--space-4);">
+        <div style="font-weight:600;margin-bottom:var(--space-1);">${t('venueFunFact')}</div>
+        <div style="font-size:var(--text-sm);color:var(--color-brand-light);">${getLang() === 'zh' ? stadium.funFact.zh : stadium.funFact.en}</div>
+      </div>` : ''}`;
+  }
+
+  // Matches at venue
+  const matchesEl = document.getElementById('venue-matches');
+  if (matchesEl) {
+    if (STATE.matchesData && STATE.matchesData.length > 0) {
+      const venueMatches = STATE.matchesData.filter(m => m.city_id === cityId);
+      if (venueMatches.length > 0) {
+        matchesEl.innerHTML = `
+          <table class="data-table">
+            <thead><tr><th>${t('matchColDate')}</th><th>${t('matchColHome')}</th><th></th><th>${t('matchColAway')}</th><th>${t('matchColStage')}</th></tr></thead>
+            <tbody>${venueMatches.map(m => {
+              const ht = TEAMS.find(t => t.id === m.home_team);
+              const at = TEAMS.find(t => t.id === m.away_team);
+              return `<tr>
+                <td>${m.date || 'TBD'}</td>
+                <td>${ht ? ht.flag : '🏳️'} ${ht ? (getLang() === 'zh' ? ht.nameZh : ht.nameEn) : (m.home_team || 'TBD')}</td>
+                <td style="text-align:center;">vs</td>
+                <td>${at ? at.flag : '🏳️'} ${at ? (getLang() === 'zh' ? at.nameZh : at.nameEn) : (m.away_team || 'TBD')}</td>
+                <td><span class="badge">${m.stage === 'group' ? (getLang() === 'zh' ? '小组赛' : 'Group') : (getLang() === 'zh' ? '淘汰赛' : 'KO')}</span></td>
+              </tr>`;
+            }).join('')}</tbody></table>`;
+      } else {
+        matchesEl.innerHTML = renderEmptyState('📅', getLang() === 'zh' ? '暂无该场馆比赛数据' : 'No match data for this venue', '');
+      }
+    } else {
+      matchesEl.innerHTML = renderEmptyState('📅', t('matchUpcomingDesc'), '');
+    }
+  }
+}
+
+/* ============================================================
+   SECTION 13: API Integration
+   ============================================================ */
+async function getJWT() {
+  // Return cached token if still valid
+  if (STATE.jwt && Date.now() < STATE.jwtExpiry) return STATE.jwt;
+
+  try {
+    const cached = JSON.parse(localStorage.getItem('wc26_jwt') || 'null');
+    if (cached && cached.token && cached.email && Date.now() < cached.expiry) {
+      STATE.jwt = cached.token;
+      STATE.jwtExpiry = cached.expiry;
+      return STATE.jwt;
+    }
+  } catch (_) {}
+
+  // Auto-register or re-authenticate — use a stable anonymous identity
+  try {
+    var creds = null;
+    try { creds = JSON.parse(localStorage.getItem('wc26_creds') || 'null'); } catch (_) {}
+
+    if (!creds || !creds.email) {
+      // First visit — auto-register with a random anonymous user
+      var rnd = Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+      creds = {
+        name: 'Travel_' + rnd.slice(-6),
+        email: 'travel_' + rnd + '@wc26tracker.local',
+        password: rnd,
+      };
+      try { localStorage.setItem('wc26_creds', JSON.stringify(creds)); } catch (_) {}
+    }
+
+    // Try authenticate first (if already registered)
+    var resp = await fetch(CONFIG.API_BASE + '/auth/authenticate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: creds.email, password: creds.password }),
+    });
+    var data = await resp.json();
+
+    // If auth fails with "User not found" (API uses either "message" or "error" key)
+    var authErrMsg = data.message || data.error || '';
+    if (!resp.ok && authErrMsg.toLowerCase().indexOf('not found') !== -1) {
+      resp = await fetch(CONFIG.API_BASE + '/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: creds.name, email: creds.email, password: creds.password }),
+      });
+      if (!resp.ok) throw new Error('Registration failed: ' + resp.status);
+      data = await resp.json();
+    } else if (!resp.ok) {
+      throw new Error('Auth failed: ' + resp.status);
+    }
+
+    STATE.jwt = data.token;
+    STATE.jwtExpiry = Date.now() + (84 * 24 * 60 * 60 * 1000); // 84 days
+    try {
+      localStorage.setItem('wc26_jwt', JSON.stringify({ token: STATE.jwt, expiry: STATE.jwtExpiry, email: creds.email }));
+    } catch (_) {}
+    return STATE.jwt;
+  } catch (e) {
+    console.warn('JWT fetch failed:', e.message);
+    return null;
+  }
+}
+
+/* Build mapping: API numeric IDs → our static IDs (by matching names) */
+function loadApiMappings() {
+  if (STATE.apiTeamMap && STATE.apiStadiumMap) return;
+
+  try {
+    // 1. Load teams from static data
+    var teamsWrapper = window.__STATIC_API_TEAMS__;
+    var apiTeams = Array.isArray(teamsWrapper) ? teamsWrapper : (teamsWrapper.teams || []);
+
+    STATE.apiTeamMap = {};
+    (apiTeams || []).forEach(function(at) {
+      var apiId = String(at.id);
+      var match = TEAMS.find(function(t) {
+        return t.nameEn && at.name_en &&
+          t.nameEn.toLowerCase() === at.name_en.toLowerCase();
+      });
+      if (match) {
+        STATE.apiTeamMap[apiId] = match.id;
+      }
+    });
+
+    // 2. Load stadiums from static data
+    var stadsWrapper = window.__STATIC_API_STADIUMS__;
+    var apiStadiums = Array.isArray(stadsWrapper) ? stadsWrapper : (stadsWrapper.stadiums || []);
+    STATE.apiStadiumMap = {};
+    (apiStadiums || []).forEach(function(as) {
+      var apiSid = String(as.id);
+      var match = STADIUMS.find(function(s) {
+        var apiName = (as.name_en || '').toLowerCase();
+        var ourName = (s.name.en || '').toLowerCase();
+        return apiName.indexOf(ourName) !== -1 || ourName.indexOf(apiName) !== -1;
+      });
+      if (match) {
+        STATE.apiStadiumMap[apiSid] = match;
+      }
+    });
+  } catch (e) {
+    console.warn('Static mappings load failed:', e.message);
+  }
+}
+
+function fetchMatches() {
+  STATE.matchesLoading = true;
+  STATE.matchesError = null;
+
+  try {
+    // Load from static embedded data (no API call needed)
+    var data = window.__STATIC_GAMES__;
+
+    // Ensure mappings are loaded
+    loadApiMappings();
+
+    // API returns {"games":[...]} — also handle legacy array / data.matches / data.data
+    const rawMatches = Array.isArray(data) ? data : (data.games || data.matches || data.data || []);
+
+    // Normalize API field names → our internal format
+    var teamMap = STATE.apiTeamMap || {};
+    var stadMap = STATE.apiStadiumMap || {};
+
+    // Helper: resolve API team to our static ID
+    function resolveTeam(apiId, nameEn) {
+      // 1. Try ID mapping (from /get/teams)
+      if (teamMap[apiId]) return teamMap[apiId];
+      // 2. Try English name matching against TEAMS
+      if (nameEn) {
+        var enLower = nameEn.toLowerCase();
+        var match = TEAMS.find(function(t) {
+          return t.nameEn && t.nameEn.toLowerCase() === enLower;
+        });
+        if (match) return match.id;
+      }
+      // 3. Fallback: return the raw name from API for display
+      return nameEn || apiId;
+    }
+
+    // Helper: resolve API stadium to our static stadium object
+    function resolveStadium(apiStadId, stadNameEn) {
+      if (stadMap[apiStadId]) return stadMap[apiStadId];
+      // Fallback: match by name
+      if (stadNameEn) {
+        var sLower = stadNameEn.toLowerCase();
+        var sm = STADIUMS.find(function(s) {
+          return s.name.en && s.name.en.toLowerCase() === sLower;
+        });
+        if (sm) return sm;
+      }
+      return null;
+    }
+
+    STATE.matchesData = rawMatches.map(function(m) {
+      var apiHomeId = m.home_team_id != null ? String(m.home_team_id) : null;
+      var apiAwayId = m.away_team_id != null ? String(m.away_team_id) : null;
+      var apiStadId = m.stadium_id != null ? String(m.stadium_id) : null;
+
+      // Resolve teams (API now includes name_en in games response!)
+      var homeTeamId = resolveTeam(apiHomeId, m.home_team_name_en);
+      var awayTeamId = resolveTeam(apiAwayId, m.away_team_name_en);
+
+      // Resolve stadium
+      var stadiumObj = resolveStadium(apiStadId, m.stadium_name_en);
+      var cityId = stadiumObj ? stadiumObj.cityId : null;
+
+      return {
+        id: m.id != null ? String(m.id) : null,
+        home_team: homeTeamId,
+        away_team: awayTeamId,
+        // API returns scores as strings, finished as "TRUE"/"FALSE"
+        home_score: parseInt(m.home_score, 10) || 0,
+        away_score: parseInt(m.away_score, 10) || 0,
+        group: m.group || null,
+        // API local_date format: "06/15/2026 12:00" → convert to "2026-06-15"
+        date: (function() {
+          var d = m.local_date || '';
+          var parts = d.split(' ')[0].split('/'); // ['06','15','2026']
+          if (parts.length === 3) return parts[2] + '-' + parts[0] + '-' + parts[1];
+          return d;
+        })(),
+        time: (function() {
+          var d = m.local_date || m.kickoff_time || '';
+          var timePart = d.split(' ')[1]; // "12:00"
+          return timePart || null;
+        })(),
+        stadium_id: stadiumObj ? stadiumObj.id : apiStadId,
+        city_id: cityId,
+        stadium_name: stadiumObj ? (stadiumObj.name.en || stadiumObj.name.zh) : null,
+        stage: m.type === 'group' ? 'group' : 'ko',
+        // API finished is string "TRUE"/"FALSE", not boolean
+        status: (m.finished === true || m.finished === 'TRUE') ? 'finished' : 'upcoming',
+        matchday: m.matchday || null,
+      };
+    });
+
+    // Cache normalized matches
+    try {
+      localStorage.setItem('wc26_matches', JSON.stringify({
+        data: STATE.matchesData,
+        cachedAt: Date.now(),
+      }));
+    } catch (_) {}
+  } catch (e) {
+    console.warn('Match fetch failed:', e.message);
+    // Try cached data
+    try {
+      const cached = JSON.parse(localStorage.getItem('wc26_matches') || 'null');
+      if (cached && cached.data && (Date.now() - cached.cachedAt) < CONFIG.MATCHES_TTL) {
+        STATE.matchesData = cached.data;
+        STATE.matchesError = null;
+        STATE.matchesLoading = false;
+        return;
+      }
+    } catch (_) {}
+    var errMsg = e.message || '';
+    if (errMsg.includes('timeout')) {
+      STATE.matchesError = t('errApiTimeout');
+    } else if (errMsg.includes('fetch') || errMsg.includes('NetworkError') || errMsg.includes('Load failed')) {
+      STATE.matchesError = t('errApiCors');
+    } else {
+      STATE.matchesError = t('errApiFailed');
+    }
+  } finally {
+    STATE.matchesLoading = false;
+  }
+}
+
+/* ============================================================
+   SECTION 14: State Helpers
+   ============================================================ */
+function renderLoadingState(msg) {
+  return `
+    <div class="state-container">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:var(--space-4);width:100%;max-width:400px;">
+        <div class="skeleton skeleton--header"></div>
+        <div class="skeleton skeleton--card"></div>
+        <div class="skeleton skeleton--card"></div>
+        <div class="skeleton skeleton--card"></div>
+        <div style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-4);">${msg}</div>
+      </div>
+    </div>`;
+}
+
+function renderErrorState(msg, retryFn) {
+  return `
+    <div class="state-container">
+      <div class="state-container__icon">⚠️</div>
+      <div class="state-container__title">${t('error')}</div>
+      <div class="state-container__desc">${msg}</div>
+      ${retryFn ? `<button class="state-container__action" onclick="(${retryFn.toString()})()">${t('retry')}</button>` : ''}
+    </div>`;
+}
+
+function renderEmptyState(icon, title, desc) {
+  return `
+    <div class="state-container">
+      <div class="state-container__icon">${icon}</div>
+      <div class="state-container__title">${title}</div>
+      ${desc ? `<div class="state-container__desc">${desc}</div>` : ''}
+    </div>`;
+}
+
+/* ============================================================
+   SECTION 15: Mobile Sidebar
+   ============================================================ */
+function toggleSidebar() {
+  STATE.sidebarOpen = !STATE.sidebarOpen;
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebar-overlay');
+  if (sidebar) sidebar.classList.toggle('sidebar--open', STATE.sidebarOpen);
+  if (overlay) overlay.classList.toggle('sidebar-overlay--visible', STATE.sidebarOpen);
+  document.body.style.overflow = STATE.sidebarOpen ? 'hidden' : '';
+}
+
+function closeSidebar() {
+  STATE.sidebarOpen = false;
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebar-overlay');
+  if (sidebar) sidebar.classList.remove('sidebar--open');
+  if (overlay) overlay.classList.remove('sidebar-overlay--visible');
+  document.body.style.overflow = '';
+}
+
+/* ============================================================
+   SECTION 16: Initialization
+   ============================================================ */
+function init() {
+  // Lang from URL or localStorage (already set in STATE)
+  document.documentElement.lang = STATE.lang;
+
+  // Apply i18n to static elements
+  renderI18n();
+  renderSidebar();
+
+  // Update meta tags
+  updateMetaTags();
+
+  // Sidebar navigation bindings
+  document.querySelectorAll('.sidebar__nav-item').forEach(el => {
+    el.addEventListener('click', function () {
+      const view = this.getAttribute('data-nav');
+      if (view) navigateTo(view);
+    });
+  });
+
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger-btn');
+  if (hamburger) hamburger.addEventListener('click', toggleSidebar);
+
+  // Sidebar overlay
+  const overlay = document.getElementById('sidebar-overlay');
+  if (overlay) overlay.addEventListener('click', closeSidebar);
+
+  // Language switch
+  const langBtn = document.getElementById('lang-switch-btn');
+  if (langBtn) {
+    langBtn.addEventListener('click', () => {
+      switchLang(STATE.lang === 'en' ? 'zh' : 'en');
+    });
+  }
+  const langBtnMobile = document.getElementById('lang-switch-btn-mobile');
+  if (langBtnMobile) {
+    langBtnMobile.addEventListener('click', () => {
+      switchLang(STATE.lang === 'en' ? 'zh' : 'en');
+    });
+  }
+
+  // Close sidebar on window resize (desktop)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 768) closeSidebar();
+  });
+
+  // Keyboard shortcut: Escape to close sidebar
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSidebar();
+  });
+
+  // Detect initial route from URL hash
+  function detectHashRoute() {
+    var hash = window.location.hash.replace('#', '');
+    if (hash === 'matches' || hash === 'teams' || hash === 'venues') {
+      navigateTo(hash);
+    } else if (hash.startsWith('team/')) {
+      var teamId = hash.split('/')[1];
+      if (teamId) navigateToTeamDetail(teamId);
+    } else if (hash.startsWith('venue/')) {
+      var cityId = hash.split('/')[1];
+      if (cityId) navigateToVenueDetail(cityId);
+    } else {
+      renderDashboard();
+    }
+  }
+  detectHashRoute();
+
+  // Handle hash changes (browser back/forward or manual hash navigation)
+  window.addEventListener('hashchange', detectHashRoute);
+
+  // Load matches from static embedded data (sync, no API calls)
+  fetchMatches();
+  refreshCurrentView();
+
+  // Restore cached matches if available
+  try {
+    const cached = JSON.parse(localStorage.getItem('wc26_matches') || 'null');
+    if (cached && cached.data && (Date.now() - cached.cachedAt) < CONFIG.MATCHES_TTL) {
+      STATE.matchesData = cached.data;
+    }
+  } catch (_) {}
+}
+
+// Boot
+document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
